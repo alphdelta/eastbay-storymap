@@ -1,0 +1,242 @@
+[
+  {
+    "name": "Point Richmond",
+    "lat": 37.9225,
+    "lon": -122.3817,
+    "r": 0.015
+  },
+  {
+    "name": "Richmond",
+    "lat": 37.9358,
+    "lon": -122.3477,
+    "r": 0.025
+  },
+  {
+    "name": "El Cerrito",
+    "lat": 37.9161,
+    "lon": -122.31,
+    "r": 0.02
+  },
+  {
+    "name": "Albany",
+    "lat": 37.8882,
+    "lon": -122.2977,
+    "r": 0.015
+  },
+  {
+    "name": "North Berkeley",
+    "lat": 37.885,
+    "lon": -122.265,
+    "r": 0.015
+  },
+  {
+    "name": "Berkeley",
+    "lat": 37.8716,
+    "lon": -122.2727,
+    "r": 0.02
+  },
+  {
+    "name": "West Berkeley",
+    "lat": 37.865,
+    "lon": -122.296,
+    "r": 0.015
+  },
+  {
+    "name": "South Berkeley",
+    "lat": 37.855,
+    "lon": -122.265,
+    "r": 0.015
+  },
+  {
+    "name": "Emeryville",
+    "lat": 37.8380,
+    "lon": -122.292,
+    "r": 0.02
+  },
+  {
+    "name": "North Oakland",
+    "lat": 37.838,
+    "lon": -122.265,
+    "r": 0.025
+  },
+  {
+    "name": "Temescal",
+    "lat": 37.835,
+    "lon": -122.26,
+    "r": 0.01
+  },
+  {
+    "name": "Rockridge",
+    "lat": 37.8446,
+    "lon": -122.251,
+    "r": 0.01
+  },
+  {
+    "name": "Downtown Oakland",
+    "lat": 37.8044,
+    "lon": -122.2712,
+    "r": 0.015
+  },
+  {
+    "name": "West Oakland",
+    "lat": 37.81,
+    "lon": -122.29,
+    "r": 0.015
+  },
+  {
+    "name": "Jack London Square",
+    "lat": 37.7954,
+    "lon": -122.2768,
+    "r": 0.01
+  },
+  {
+    "name": "Lake Merritt",
+    "lat": 37.8028,
+    "lon": -122.26,
+    "r": 0.015
+  },
+  {
+    "name": "Adams Point",
+    "lat": 37.81,
+    "lon": -122.25,
+    "r": 0.01
+  },
+  {
+    "name": "Grand Lake",
+    "lat": 37.81,
+    "lon": -122.24,
+    "r": 0.012
+  },
+  {
+    "name": "Piedmont",
+    "lat": 37.8243,
+    "lon": -122.2318,
+    "r": 0.015
+  },
+  {
+    "name": "Fruitvale",
+    "lat": 37.7744,
+    "lon": -122.2244,
+    "r": 0.02
+  },
+  {
+    "name": "Jingletown",
+    "lat": 37.787,
+    "lon": -122.238,
+    "r": 0.008
+  },
+  {
+    "name": "San Antonio",
+    "lat": 37.793,
+    "lon": -122.237,
+    "r": 0.015
+  },
+  {
+    "name": "Dimond",
+    "lat": 37.79,
+    "lon": -122.21,
+    "r": 0.012
+  },
+  {
+    "name": "Laurel",
+    "lat": 37.784,
+    "lon": -122.218,
+    "r": 0.01
+  },
+  {
+    "name": "Seminary",
+    "lat": 37.765,
+    "lon": -122.197,
+    "r": 0.015
+  },
+  {
+    "name": "Elmhurst",
+    "lat": 37.755,
+    "lon": -122.18,
+    "r": 0.02
+  },
+  {
+    "name": "East Oakland",
+    "lat": 37.755,
+    "lon": -122.172,
+    "r": 0.025
+  },
+  {
+    "name": "Eastmont",
+    "lat": 37.7686,
+    "lon": -122.174,
+    "r": 0.012
+  },
+  {
+    "name": "Montclair",
+    "lat": 37.83,
+    "lon": -122.21,
+    "r": 0.015
+  },
+  {
+    "name": "San Leandro",
+    "lat": 37.7249,
+    "lon": -122.1561,
+    "r": 0.03
+  },
+  {
+    "name": "Alameda",
+    "lat": 37.7652,
+    "lon": -122.2416,
+    "r": 0.025
+  },
+  {
+    "name": "Castro Valley",
+    "lat": 37.694,
+    "lon": -122.0864,
+    "r": 0.025
+  },
+  {
+    "name": "Hayward",
+    "lat": 37.6688,
+    "lon": -122.0808,
+    "r": 0.03
+  },
+  {
+    "name": "Kensington",
+    "lat": 37.91,
+    "lon": -122.28,
+    "r": 0.012
+  },
+  {
+    "name": "El Sobrante",
+    "lat": 37.96,
+    "lon": -122.29,
+    "r": 0.02
+  },
+  {
+    "name": "San Pablo",
+    "lat": 37.962,
+    "lon": -122.345,
+    "r": 0.015
+  },
+  {
+    "name": "Hercules",
+    "lat": 38.017,
+    "lon": -122.2886,
+    "r": 0.02
+  },
+  {
+    "name": "Pinole",
+    "lat": 38.0044,
+    "lon": -122.2989,
+    "r": 0.015
+  },
+  {
+    "name": "Oakland Hills",
+    "lat": 37.81,
+    "lon": -122.19,
+    "r": 0.02
+  },
+  {
+    "name": "Oakland",
+    "lat": 37.8044,
+    "lon": -122.2712,
+    "r": 0.06
+  }
+]

@@ -1,0 +1,153 @@
+route,stop,re_ratio,lat,lon
+L,Bayside Common Condominiums,0.3464,37.896314,-122.30815
+L,Pierce St & Gateview Apts,0.2938,37.894086,-122.307189
+L,Central Av & Yosemite Av,0.5748,37.901748,-122.305328
+L,San Pablo Av & Cutting Blvd-Del Norte BART Stop D1,0.5555,37.925038,-122.318029
+L,San Pablo Av & Lincoln Av,0.6117,37.904239,-122.304151
+L,San Pablo Av & Manila Av (El Cerrito City Hall),0.5677,37.915684,-122.311442
+L,San Pablo Av & Moeser Ln,0.5768,37.911864,-122.308824
+L,San Pablo Av & Potrero Av,0.5879,37.921202,-122.31533
+L,Pierce St & Central Av,0.5436,37.900813,-122.309608
+L,Pierce St & Pacific East Mall,0.4174,37.89835,-122.309032
+L,Richmond Pkwy Transit Center (Park & Ride),0.3253,37.986126,-122.316644
+L,San Pablo Av & Garvin Av,0.5877,37.944037,-122.329083
+L,San Pablo Av & Macdonald Av,0.6139,37.932723,-122.323514
+L,Church Ln & El Portal Dr,0.5442,37.962557,-122.336262
+L,Church Ln & San Pablo Av,0.6138,37.959122,-122.33975
+L,13685 San Pablo Av,0.5038,37.95765,-122.338493
+L,San Pablo Av & Kirk Ln,0.5673,37.951178,-122.332499
+L,San Pablo Av & Vale Rd,0.5413,37.955914,-122.336062
+L,San Pablo Av & Stockton Av,0.6172,37.908039,-122.306212
+L,Salesforce Transit Center Bay 6,0.5174,37.78818,-122.397909
+L,Pierce St & Solano Av,0.3061,37.889187,-122.305777
+57,40th St & Emery St,0.5972,37.830607,-122.281322
+57,40th St & Harlan St,0.5086,37.830189,-122.283446
+57,40th St & Hollis St,0.5873,37.829901,-122.284882
+57,Christie Av & 65th St,0.2349,37.845658,-122.296453
+57,Christie Av & Powell Street Plaza Shopping Center,0.4764,37.837433,-122.29449
+57,40th St & Horton St,0.5501,37.829439,-122.287267
+57,40th St & San Pablo Av,0.6663,37.831075,-122.279039
+57,Shellmound St & Bay St,0.1436,37.833348,-122.293641
+57,Christie Av & Pacific Park Plaza,0.3658,37.842652,-122.295508
+57,40th St & Broadway,0.6496,37.827621,-122.257059
+57,40th St & MacArthur BART,0.5834,37.829354,-122.266482
+57,40th St & Market St,0.6393,37.830488,-122.273665
+57,40th St & Telegraph Av,0.6544,37.829094,-122.264675
+57,40th St & Webster St,0.6282,37.828488,-122.261004
+57,40th St & West St,0.6377,37.830113,-122.271243
+57,Foothill Blvd & Church St,0.6095,37.769707,-122.176943
+57,Foothill Blvd & Eastmont Transit Center,0.5476,37.769279,-122.174148
+57,Foothill Blvd & Havenscourt Blvd,0.6647,37.770297,-122.181497
+57,345 MacArthur Blvd,0.3503,37.813202,-122.251178
+57,MacArthur Blvd & 13th Av (Edna Brewer Middle Sch.),0.6454,37.802297,-122.231741
+57,MacArthur Blvd & 35th Av,0.5988,37.79385,-122.200851
+57,MacArthur Blvd & 38th Av,0.6071,37.790837,-122.198091
+57,MacArthur Blvd & 77th Av,0.5943,37.767153,-122.169415
+57,MacArthur Blvd & 82nd Av,0.6206,37.762495,-122.16485
+57,MacArthur Blvd & 84th Av,0.5265,37.76134,-122.16386
+57,MacArthur Blvd & 94th Av,0.551,37.753008,-122.160506
+57,MacArthur Blvd & 96th Av,0.575,37.751358,-122.159926
+57,MacArthur Blvd & 98th Av,0.6352,37.750003,-122.159045
+57,MacArthur Blvd & 99th Av,0.6058,37.747084,-122.157144
+57,MacArthur Blvd & Adams St,0.4386,37.815938,-122.252311
+57,MacArthur Blvd & Adell Ct,0.6129,37.80082,-122.219118
+57,MacArthur Blvd & Athol Av,0.5104,37.807008,-122.24153
+57,MacArthur Blvd & Beaumont Av,0.616,37.800482,-122.229193
+57,MacArthur Blvd & Boston Av,0.6244,37.799478,-122.21293
+57,MacArthur Blvd & Byron Av,0.5972,37.745407,-122.155551
+57,MacArthur Blvd & Coolidge Av (Bret Harte Junior H),0.6,37.798473,-122.209001
+57,MacArthur Blvd & Grand Av,0.7045,37.810236,-122.249096
+57,MacArthur Blvd & Laguna Av,0.6149,37.798948,-122.210897
+57,MacArthur Blvd & Lakeshore Av,0.5727,37.809706,-122.247528
+57,MacArthur Blvd & Laurel Av,0.5748,37.796162,-122.203509
+57,MacArthur Blvd & Maple Av,0.6114,37.797393,-122.205135
+57,MacArthur Blvd & Maybelle Av,0.6088,37.788599,-122.196067
+57,MacArthur Blvd & Park Blvd,0.5792,37.804059,-122.234134
+57,MacArthur Blvd & Parker Av,0.5358,37.766118,-122.16799
+57,MacArthur Blvd & Sheffield Av,0.613,37.799991,-122.220904
+57,MacArthur Blvd & Van Buren Av,0.5286,37.811312,-122.250548
+57,MacArthur Blvd & Vernon St,0.5362,37.817221,-122.252922
+57,MacArthur Blvd & Warner Av,0.5864,37.748396,-122.157994
+57,MacArthur Blvd & Wesley Av,0.532,37.808583,-122.244452
+57,MacArthur Blvd & Woodruff Av,0.6272,37.800354,-122.222855
+57,W MacArthur Blvd & Fairmount Av,0.5911,37.821515,-122.254789
+57,40th St & Martin Luther King Jr Way,0.6191,37.829573,-122.267891
+57,MacArthur Blvd & High St,0.6036,37.786981,-122.194607
+57,MacArthur Blvd & Pierson St.(Mills College),0.5739,37.782625,-122.18803
+57,MacArthur Blvd & 90th Av,0.4463,37.755262,-122.161323
+57,MacArthur Blvd & Millsbrae Av,0.5855,37.775819,-122.186109
+57,14th Av & E 33rd St,0.5635,37.800145,-122.227145
+57,W MacArthur Blvd & Piedmont Av,0.6699,37.822954,-122.256444
+57,106th Av & MacArthur Blvd,0.6058,37.743116,-122.152077
+57,MacArthur Blvd & Fruitvale Av,0.6521,37.800204,-122.215789
+57,MacArthur Blvd & Randolph Av,0.6212,37.800686,-122.224632
+57,MacArthur Blvd & 88th Av,0.4346,37.757388,-122.162128
+57,MacArthur Blvd & 55th Av,0.5474,37.777644,-122.188113
+57,W MacArthur Blvd & Howe St,0.6687,37.823905,-122.257811
+57,Foothill Blvd & 108th Av,0.4718,37.743464,-122.147794
+57,MacArthur Blvd & Ritchie St,0.5818,37.76443,-122.16654
+57,Camden St & 62nd Av (Frick Middle School),0.5943,37.773455,-122.183288
+57,Camden St & 64th Av,0.6279,37.772152,-122.181867
+57,MacArthur Blvd & Castlemont High School,0.419,37.76022,-122.163164
+57,MacArthur Blvd & Alma Av (Oakland High School),0.4737,37.805404,-122.23695
+1T,Downtown San Leandro SB,0.4925,37.72544,-122.157925
+1T,San Leandro Civic Center SB,0.611,37.728445,-122.158803
+1T,Georgia Way SB,0.566,37.732028,-122.161485
+1T,Durant Avenue,0.5851,37.735617,-122.164005
+1T,103rd Avenue,0.5972,37.740639,-122.167757
+1T,98th Avenue,0.5947,37.743343,-122.169794
+1T,95th Avenue,0.5951,37.745979,-122.171732
+1T,90th Avenue,0.5844,37.749303,-122.174198
+1T,86th Avenue,0.6037,37.752258,-122.176386
+1T,82nd Avenue,0.5959,37.755697,-122.179737
+1T,77th Avenue,0.6056,37.758032,-122.18465
+1T,73rd Avenue,0.5819,37.759805,-122.18838
+1T,67th Avenue,0.5795,37.761301,-122.191508
+1T,63rd Avenue,0.5957,37.763436,-122.196046
+1T,Seminary,0.6188,37.76559,-122.200553
+1T,48th Avenue,0.6247,37.769574,-122.209049
+1T,High Street,0.6102,37.771538,-122.213176
+1T,28th Avenue,0.5607,37.779959,-122.230205
+1T,24th Avenue,0.4704,37.782547,-122.234526
+1T,20th Avenue,0.4592,37.785624,-122.239667
+1T,14th Avenue SB,0.4767,37.788785,-122.246421
+1T,10th Avenue SB,0.4019,37.790419,-122.249667
+1T,San Leandro BART,0.5191,37.721569,-122.160166
+1T,5th Avenue SB,0.5767,37.793694,-122.25336
+1T,2nd Avenue SB,0.5541,37.796971,-122.257103
+1T,Madison SB,0.5857,37.799508,-122.265638
+1T,Uptown Oakland SB,0.6513,37.808537,-122.268681
+1T,14th Street SB,0.6285,37.804092,-122.271487
+1T,City Center SB,0.6296,37.80189,-122.271797
+1T,Harrison SB,0.6038,37.800431,-122.267992
+1T,31st  Avenue,0.5581,37.778071,-122.226842
+1T,Fruitvale,0.5445,37.776438,-122.223443
+1T,39th Avenue,0.5559,37.77445,-122.219282
+1T,54th Avenue,0.5996,37.768014,-122.205743
+F,Adeline St & Alcatraz Av,0.6531,37.849115,-122.271091
+F,Adeline St & Ashby Av,0.63,37.855424,-122.268619
+F,Adeline St & Ashby BART,0.6327,37.852913,-122.269542
+F,Adeline St & Fairview St,0.6246,37.851003,-122.270477
+F,Adeline St & Oregon St,0.626,37.857758,-122.267728
+F,Shattuck Av & Durant Av,0.6027,37.866604,-122.267517
+F,Shattuck Av & Dwight Way,0.6274,37.863909,-122.267216
+F,Shattuck Av & Kittredge St,0.6088,37.86845,-122.267722
+F,Shattuck Av & Parker St,0.6163,37.862092,-122.266997
+F,Shattuck Av & University Av,0.6555,37.872541,-122.268319
+F,40th St & Emery St,0.5972,37.830607,-122.281322
+F,40th St & Harlan St,0.5086,37.830189,-122.283446
+F,40th St & Hollis St,0.5873,37.829901,-122.284882
+F,Christie Av & Powell Street Plaza Shopping Center,0.4764,37.837433,-122.29449
+F,40th St & Horton St,0.5501,37.829439,-122.287267
+F,40th St & San Pablo Av,0.6709,37.83103,-122.279367
+F,Shellmound St & Bay St,0.1436,37.833348,-122.293641
+F,Market St & 40th St,0.6355,37.830886,-122.273785
+F,Market St & 45th St,0.5918,37.834341,-122.27291
+F,Market St & 55th St,0.616,37.839138,-122.273795
+F,Market St & Arlington Av,0.6384,37.842233,-122.274463
+F,Stanford Av & King St,0.3249,37.845978,-122.272847
+F,Salesforce Transit Center Bay 32,0.6153,37.789949,-122.395668
+F,Market St & 53rd St,0.6608,37.837797,-122.273517
+F,Shattuck Av & Allston Way,0.6302,37.86988,-122.267802
+F,Hearst Av & Walnut St,0.6397,37.873981,-122.266985
+F,Stanford Av & Market St,0.7056,37.844483,-122.274691

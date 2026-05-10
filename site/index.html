@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>East Bay Transit Equity Story Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div id="sidebar">
+    <div id="sidebar-header">
+      <h1>Shattered Circles</h1>
+      <p class="subtitle">A Spatial Equity Audit of East Bay Transit</p>
+    </div>
+
+    <!-- Tab bar -->
+    <div id="tab-bar">
+      <button class="tab-btn active" data-tab="story">Story</button>
+      <button class="tab-btn" data-tab="lines">Lines</button>
+      <button class="tab-btn" data-tab="legend">Legend</button>
+    </div>
+
+    <div id="tab-content">
+      <!-- ===== STORY TAB ===== -->
+      <div class="tab-pane active" id="tab-story">
+        <div id="sidebar-content">
+          <!-- Intro panel -->
+          <div class="story-panel active" data-panel="intro">
+            <h2>Life Along the Corridors</h2>
+            <p>Freeways and rail lines don't just move people through the East Bay&mdash;they divide the communities around them. This map follows AC Transit routes that parallel major corridors. Each bus stop becomes a lens: a half-mile walking polygon reveals how much of the surrounding neighborhood is actually reachable on foot.</p>
+            <div class="route-grid-3x3" id="route-grid-3x3"></div>
+            <p class="hint">Press <b>Next</b> to begin the guided walkthrough, or toggle polygons in the Lines tab to explore on your own.</p>
+          </div>
+
+          <!-- Walkthrough panel -->
+          <div class="story-panel" data-panel="walkthrough" id="walkthrough-panel">
+            <div id="wt-content"></div>
+          </div>
+
+          <!-- Route overview / line view panel -->
+          <div class="story-panel" data-panel="route" id="route-panel">
+            <div id="route-header">
+              <span class="site-badge" id="route-badge"></span>
+              <h2 id="route-title"></h2>
+            </div>
+            <p id="route-desc"></p>
+            <div id="route-summary-stats"></div>
+            <h3 class="section-heading">Reach Ratio Along the Line</h3>
+            <div id="route-gradient-bar"></div>
+            <div id="route-stop-list"></div>
+          </div>
+
+          <!-- Site-specific panel -->
+          <div class="story-panel" data-panel="site" id="site-panel">
+            <div id="site-header">
+              <span class="site-badge" id="site-badge"></span>
+              <h2 id="site-title"></h2>
+            </div>
+            <div id="site-stats-container"></div>
+            <div id="site-description">
+              <p id="site-desc-text"></p>
+            </div>
+            <div id="site-pie-chart"></div>
+          </div>
+
+          <!-- Walkthrough panel -->
+          <div class="story-panel" data-panel="walkthrough" id="walkthrough-panel">
+            <div id="walk-header">
+              <span class="site-badge walk-badge" id="walk-badge">FEATURED SITE</span>
+              <h2 id="walk-title"></h2>
+            </div>
+            <div id="walk-stats"></div>
+            <div id="walk-narrative"></div>
+            <div id="walk-interview" style="display:none;">
+              <h3 class="section-heading">Community Voice</h3>
+              <blockquote id="walk-quote"></blockquote>
+              <p class="interview-attr" id="walk-attr"></p>
+            </div>
+          </div>
+
+          <!-- Control site panel -->
+          <div class="story-panel" data-panel="control" id="control-panel">
+            <div id="control-header">
+              <span class="site-badge control-badge">CONTROL SITE</span>
+              <h2 id="control-title"></h2>
+            </div>
+            <div id="control-stats">
+              <div class="stat-card">
+                <div class="stat-value" id="control-stat-re">--</div>
+                <div class="stat-label">Reach Ratio (R<sub>e</sub>)</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" id="control-stat-noise">--</div>
+                <div class="stat-label">Noise Level (dB)</div>
+              </div>
+            </div>
+            <p id="control-desc-text"></p>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div id="sidebar-nav">
+          <button id="btn-prev" class="nav-btn" disabled>&larr; Previous</button>
+          <span id="nav-counter">1 / 1</span>
+          <button id="btn-next" class="nav-btn">Next &rarr;</button>
+        </div>
+      </div>
+
+      <!-- ===== LINES TAB ===== -->
+      <div class="tab-pane" id="tab-lines">
+        <div class="tab-pane-inner">
+          <p class="tab-pane-desc">Toggle bus routes on and off. The nine analysis routes are shown by default.</p>
+          <div id="lines-list"></div>
+        </div>
+      </div>
+
+      <!-- ===== LEGEND TAB ===== -->
+      <div class="tab-pane" id="tab-legend">
+        <div class="tab-pane-inner">
+          <h3 class="section-heading">Map Layers</h3>
+
+          <div class="legend-block">
+            <div class="legend-block-title">Analysis Polygons</div>
+            <div class="legend-row">
+              <svg width="24" height="14"><polygon points="2,2 22,4 20,12 4,10" fill="#e41a1c" fill-opacity="0.2" stroke="#e41a1c" stroke-width="1.5"/></svg>
+              <span>Walking network polygon (shattered circle)</span>
+            </div>
+            <div class="legend-row">
+              <svg width="24" height="14"><circle cx="12" cy="7" r="5" fill="none" stroke="#555" stroke-width="1.5" stroke-dasharray="3 2"/></svg>
+              <span>&frac12;-mile reference circle</span>
+            </div>
+          </div>
+
+          <div class="legend-block">
+            <div class="legend-block-title">Analysis Routes</div>
+            <div class="legend-row"><span class="legend-color" style="background:#DAA520"></span> Line L &mdash; I-80 Corridor</div>
+            <div class="legend-row"><span class="legend-color" style="background:#DAA520"></span> Line 57 &mdash; I-580 Corridor</div>
+            <div class="legend-row"><span class="legend-color" style="background:#DAA520"></span> Line 1T &mdash; BART Fruitvale</div>
+            <div class="legend-row"><span class="legend-color" style="background:#DAA520"></span> Line F &mdash; BART Richmond</div>
+            <div class="legend-row"><span class="legend-color" style="background:#DAA520"></span> Line 9 &mdash; E. 14th St Corridor</div>
+            <div class="legend-row"><span class="legend-color" style="background:#DAA520"></span> Line 28 &mdash; International Blvd</div>
+            <div class="legend-row"><span class="legend-color" style="background:#DAA520"></span> Line 34 &mdash; MacArthur Blvd</div>
+            <div class="legend-row"><span class="legend-color" style="background:#DAA520"></span> Line E &mdash; Emeryville Corridor</div>
+            <div class="legend-row"><span class="legend-color" style="background:#DAA520"></span> Line V &mdash; Broadway Corridor</div>
+          </div>
+
+          <div class="legend-block">
+            <div class="legend-block-title">Other Bus Routes</div>
+            <div class="legend-row"><span class="legend-color" style="background:#A30D11"></span> Rapid</div>
+            <div class="legend-row"><span class="legend-color" style="background:#07B5D0"></span> Frequent</div>
+            <div class="legend-row"><span class="legend-color" style="background:#2B589C"></span> Local</div>
+            <div class="legend-row"><span class="legend-color" style="background:#492F92"></span> Transbay</div>
+            <div class="legend-row"><span class="legend-color" style="background:#888888"></span> All Nighter / Supplemental</div>
+            <div class="legend-row"><span class="legend-color" style="background:#595959"></span> School</div>
+          </div>
+
+          <div class="legend-block">
+            <div class="legend-block-title">Line Weight</div>
+            <div class="legend-row">
+              <svg width="40" height="14"><line x1="0" y1="7" x2="40" y2="7" stroke="#DAA520" stroke-width="4" stroke-opacity="0.9"/></svg>
+              <span>Near bus stops</span>
+            </div>
+            <div class="legend-row">
+              <svg width="40" height="14"><line x1="0" y1="7" x2="40" y2="7" stroke="#DAA520" stroke-width="2" stroke-opacity="0.35"/></svg>
+              <span>Between stops</span>
+            </div>
+          </div>
+
+          <div class="legend-block">
+            <div class="legend-block-title">Infrastructure Barriers</div>
+            <div class="legend-row">
+              <svg width="24" height="14"><line x1="0" y1="7" x2="24" y2="7" stroke="#555" stroke-width="3"/></svg>
+              <span>Highway / Motorway</span>
+            </div>
+            <div class="legend-row">
+              <svg width="24" height="14"><line x1="0" y1="7" x2="24" y2="7" stroke="#333" stroke-width="2" stroke-dasharray="4 3"/></svg>
+              <span>Railway</span>
+            </div>
+          </div>
+
+          <div class="legend-block">
+            <div class="legend-block-title">Reach Ratio (R<sub>e</sub>)</div>
+            <p class="legend-note">Ratio of actual walkable area to a full half-mile circle. Values closer to 1.0 indicate better connectivity; lower values indicate infrastructure barriers.</p>
+            <div class="re-scale">
+              <div class="re-scale-bar"></div>
+              <div class="re-scale-labels">
+                <span>0.0 (blocked)</span>
+                <span>1.0 (full circle)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="legend-block">
+            <div class="legend-block-title">Population Density</div>
+            <p class="legend-note">Population per square mile within each walking polygon, from Census 2020 block groups.</p>
+            <div class="re-scale">
+              <div class="re-scale-bar" style="background: linear-gradient(to right, rgb(255,255,178), rgb(253,141,60), rgb(189,0,38));"></div>
+              <div class="re-scale-labels">
+                <span>Low</span>
+                <span>High</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="legend-block">
+            <div class="legend-block-title">Symbols</div>
+            <div class="legend-row">
+              <span style="font-size:16px;color:#DAA520;">&#10148;</span>
+              <span>Route continues off-map (to SF)</span>
+            </div>
+            <div class="legend-row">
+              <svg width="12" height="12"><circle cx="6" cy="6" r="4" fill="#DAA520" stroke="#fff" stroke-width="1.5"/></svg>
+              <span>Bus stop</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Map Container -->
+  <div id="map"></div>
+
+  <!-- Live polygon legend -->
+  <div id="live-legend"></div>
+
+  <!-- Back to overview button (shown in Overlay 2) -->
+  <button id="btn-back-overview" style="display:none;">&larr; Back to Overview</button>
+
+  <!-- Half-mile circle legend (shown when zoomed) -->
+  <div id="circle-legend" style="display:none;">
+    <span class="circle-legend-icon"></span> &frac12;-mile walking radius
+    <span class="click-hint">Click outside or press Esc to return</span>
+  </div>
+
+  <!-- Reach Ratio toggle -->
+  <div id="view-toggle-group">
+    <button id="btn-reach-ratio" title="Toggle Reach Ratio gradient view">R<sub>e</sub> View</button>
+    <button id="btn-density-view" title="Toggle Population Density gradient view">Density View</button>
+  </div>
+
+  <!-- Reach Ratio scale legend (shown in Re mode) -->
+  <div id="re-map-legend" style="display:none;">
+    <div class="re-map-legend-title">Reach Ratio (R<sub>e</sub>)</div>
+    <div class="re-map-scale-bar"></div>
+    <div class="re-map-scale-labels">
+      <span>0.0</span><span>0.5</span><span>1.0</span>
+    </div>
+    <div class="re-map-scale-desc">Low &larr; Blocked &nbsp;|&nbsp; Connected &rarr; High</div>
+  </div>
+
+  <!-- Density scale legend (shown in Density mode) -->
+  <div id="density-map-legend" style="display:none;">
+    <div class="re-map-legend-title">Population Density (per sq mi)</div>
+    <div class="density-map-scale-bar"></div>
+    <div class="re-map-scale-labels">
+      <span id="density-min">0</span><span id="density-mid">—</span><span id="density-max">—</span>
+    </div>
+    <div class="re-map-scale-desc">Low &larr; Sparse &nbsp;|&nbsp; Dense &rarr; High</div>
+  </div>
+
+  <!-- Basemap toggle -->
+  <div id="basemap-toggle">
+    <button class="basemap-btn active" data-basemap="light">Map</button>
+    <button class="basemap-btn" data-basemap="satellite">Satellite</button>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

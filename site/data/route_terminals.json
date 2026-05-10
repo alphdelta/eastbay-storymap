@@ -1,0 +1,494 @@
+{
+  "71": {
+    "origin": "El Cerrito Plaza BART",
+    "terminus": "Richmond Pkwy Transit Center (Park & Ride)"
+  },
+  "45": {
+    "origin": "Foothill Blvd & 106th Av",
+    "terminus": "Eastmont Transit Center"
+  },
+  "14": {
+    "origin": "West Oakland BART",
+    "terminus": "Fruitvale BART"
+  },
+  "12": {
+    "origin": "Gilman St & 7th St",
+    "terminus": "Alice St & 2nd St"
+  },
+  "60": {
+    "origin": "West Loop Rd & CSU East Bay Library",
+    "terminus": "South Hayward BART"
+  },
+  "31": {
+    "origin": "Skyline Blvd & Balmoral Dr (Skyline High School)",
+    "terminus": "Mecartney Rd & Auburn Dr"
+  },
+  "62": {
+    "origin": "Fruitvale BART",
+    "terminus": "West Oakland BART"
+  },
+  "662": {
+    "origin": "Broadway & 40th St",
+    "terminus": "Skyline High School"
+  },
+  "88": {
+    "origin": "Highland Way & Highland Av",
+    "terminus": "Center St & Shattuck Av (Downtown Berkeley BART)"
+  },
+  "57": {
+    "origin": "Foothill Blvd & 108th Av",
+    "terminus": "Christie Av at Public Market"
+  },
+  "51B": {
+    "origin": "University Av & Bait Shop",
+    "terminus": "College Av & Rockridge BART"
+  },
+  "211": {
+    "origin": "Warmsprings BART",
+    "terminus": "Union City BART"
+  },
+  "658": {
+    "origin": "W MacArthur Blvd & Howe St",
+    "terminus": "Skyline High School"
+  },
+  "1T": {
+    "origin": "San Leandro BART",
+    "terminus": "Broadway & 19th St"
+  },
+  "27": {
+    "origin": "Emeryville Amtrak",
+    "terminus": "El Cerrito Plaza BART"
+  },
+  "6": {
+    "origin": "10th St & Washington St",
+    "terminus": "Oxford St & Center St"
+  },
+  "36": {
+    "origin": "West Oakland BART",
+    "terminus": "College Av & Miles Av (Claremont Middle School)"
+  },
+  "72": {
+    "origin": "Contra Costa College",
+    "terminus": "2nd St & Washington St"
+  },
+  "73": {
+    "origin": "Oakland International Airport",
+    "terminus": "Eastmont Transit Center"
+  },
+  "95": {
+    "origin": "Hayward BART",
+    "terminus": "Eddy St & Kelly St"
+  },
+  "22": {
+    "origin": "Lakeshore Av & Mandana Blvd",
+    "terminus": "Addison St & Oxford St"
+  },
+  "F": {
+    "origin": "Salesforce Transit Center Bay 32",
+    "terminus": "Bancroft Way & Dana St"
+  },
+  "231": {
+    "origin": "Fremont BART",
+    "terminus": "Milpitas BART VTA Bay 9"
+  },
+  "40": {
+    "origin": "11th St & Clay St",
+    "terminus": "Bay Fair BART"
+  },
+  "281": {
+    "origin": "Union City BART",
+    "terminus": "New Park Mall"
+  },
+  "52": {
+    "origin": "Bancroft Way & Telegraph Av",
+    "terminus": "Monroe St & 10th St"
+  },
+  "216": {
+    "origin": "Union City BART",
+    "terminus": "Mowry Av & Silliman Cr."
+  },
+  "28": {
+    "origin": "Hayward BART",
+    "terminus": "San Leandro BART"
+  },
+  "46L": {
+    "origin": "Golf Links Rd & Grass Valley Sch.(Near Dunkirk Av)",
+    "terminus": "San Leandro St & Coliseum BART Walkway"
+  },
+  "7": {
+    "origin": "Christie Av & 59th St",
+    "terminus": "Del Norte BART (Stop B1)"
+  },
+  "93": {
+    "origin": "Castro Valley BART Station",
+    "terminus": "Bay Fair BART"
+  },
+  "646": {
+    "origin": "Montera Jr High School & Scout Rd",
+    "terminus": "San Leandro St & Coliseum BART"
+  },
+  "18": {
+    "origin": "Monroe St & Jackson St",
+    "terminus": "Mountain Blvd & Moraga Av"
+  },
+  "O": {
+    "origin": "Salesforce Transit Center Bay 28",
+    "terminus": "Fruitvale BART"
+  },
+  "200": {
+    "origin": "Union City BART",
+    "terminus": "Fremont BART"
+  },
+  "56": {
+    "origin": "Union Landing Transit Center",
+    "terminus": "Hayward BART"
+  },
+  "54": {
+    "origin": "Campus Dr & Merritt College",
+    "terminus": "Seminary Av & Div 4 Gate"
+  },
+  "86": {
+    "origin": "South Hayward BART",
+    "terminus": "Hayward BART"
+  },
+  "684": {
+    "origin": "Richmond BART",
+    "terminus": "Ashbury Av & Eureka Av (El Cerrito High School)"
+  },
+  "800": {
+    "origin": "Market St & South Van Ness Av",
+    "terminus": "Richmond BART"
+  },
+  "210": {
+    "origin": "Union Landing Transit Center",
+    "terminus": "Ohlone College-Key C"
+  },
+  "30": {
+    "origin": "Fruitvale Av & MacArthur Blvd",
+    "terminus": "Martin Luther King Jr Way & 11th St"
+  },
+  "34": {
+    "origin": "Hayward BART",
+    "terminus": "Foothill Blvd & 106th Av"
+  },
+  "97": {
+    "origin": "Bay Fair BART",
+    "terminus": "Union City BART"
+  },
+  "683": {
+    "origin": "Medau Pl & Moraga Av",
+    "terminus": "98th Av & Cherokee Av (Bishop O'Dowd High School)"
+  },
+  "51A": {
+    "origin": "Fruitvale BART",
+    "terminus": "Keith Av & College Av"
+  },
+  "9": {
+    "origin": "San Leandro BART",
+    "terminus": "Union City BART"
+  },
+  "NL": {
+    "origin": "Salesforce Transit Center Bay 30",
+    "terminus": "Eastmont Transit Center"
+  },
+  "623": {
+    "origin": "N Milpitas Blvd & Dixon Rd",
+    "terminus": "Chapel Way & Laurel St (Horner Jr High School)"
+  },
+  "90": {
+    "origin": "San Leandro St & Coliseum BART Walkway",
+    "terminus": "MacArthur Blvd & 108th Av"
+  },
+  "72M": {
+    "origin": "Tewksbury Av & Castro St",
+    "terminus": "2nd St & Washington St"
+  },
+  "96": {
+    "origin": "W Midway Av & Monarch St",
+    "terminus": "Montana St & Fruitvale Av"
+  },
+  "70": {
+    "origin": "Del Norte BART (Stop B4)",
+    "terminus": "Richmond Pkwy Transit Center (Park & Ride)"
+  },
+  "74": {
+    "origin": "Harbour Way S & Ford Point",
+    "terminus": "2400 Valley View Rd"
+  },
+  "76": {
+    "origin": "Del Norte BART (Stop B4)",
+    "terminus": "Richmond Pkwy Transit Center (Park & Ride)"
+  },
+  "L": {
+    "origin": "Richmond Pkwy Transit Center (Park & Ride)",
+    "terminus": "Salesforce Transit Center"
+  },
+  "W": {
+    "origin": "Salesforce Transit Center Bay 24",
+    "terminus": "Island Dr & Bayfarm Park & Ride Lot"
+  },
+  "19": {
+    "origin": "Fruitvale BART",
+    "terminus": "11th St & Jefferson St"
+  },
+  "35": {
+    "origin": "Foothill Blvd & 106th Av",
+    "terminus": "Bay Fair BART"
+  },
+  "801": {
+    "origin": "San Leandro BART",
+    "terminus": "Fremont BART"
+  },
+  "98": {
+    "origin": "Eastmont Transit Center",
+    "terminus": "San Leandro St & Coliseum BART Walkway"
+  },
+  "72L": {
+    "origin": "2nd St & Washington St",
+    "terminus": "Contra Costa College"
+  },
+  "649": {
+    "origin": "Montera Jr High School & Scout Rd",
+    "terminus": "Golf Links Rd & Grass Valley Sch.(Near Dunkirk Av)"
+  },
+  "239": {
+    "origin": "Fremont BART",
+    "terminus": "N Milpitas Blvd & Dixon Rd"
+  },
+  "67": {
+    "origin": "Spruce St & Grizzly Peak Blvd",
+    "terminus": "Allston Way & Shattuck Av"
+  },
+  "657": {
+    "origin": "Broadway & 42nd St (Oakland Technical High School)",
+    "terminus": "San Leandro St & Coliseum BART"
+  },
+  "65": {
+    "origin": "Grizzly Peak Blvd + Senior Av",
+    "terminus": "Allston Way & Shattuck Av"
+  },
+  "V": {
+    "origin": "Salesforce Transit Center Bay 25",
+    "terminus": "Broadway & College Av"
+  },
+  "41": {
+    "origin": "Hayward BART",
+    "terminus": "Union Landing Transit Center"
+  },
+  "NX": {
+    "origin": "Salesforce Transit Center Bay 20",
+    "terminus": "MacArthur Blvd & Millsbrae Av"
+  },
+  "J": {
+    "origin": "Salesforce Transit Center Bay 35",
+    "terminus": "University Av & Acton St"
+  },
+  "251": {
+    "origin": "Mowry Av & Silliman Cr.",
+    "terminus": "Fremont BART"
+  },
+  "805": {
+    "origin": "Oakland International Airport",
+    "terminus": "Broadway & 14th St"
+  },
+  "682": {
+    "origin": "98th Av & Stearns Av (Bishop O'Dowd High School)",
+    "terminus": "40th St & Broadway"
+  },
+  "851": {
+    "origin": "Shattuck Av & Allston Way",
+    "terminus": "Fruitvale BART"
+  },
+  "638": {
+    "origin": "Skyline High School",
+    "terminus": "73rd Av & International Blvd"
+  },
+  "U": {
+    "origin": "Stanford Oval",
+    "terminus": "Fremont BART"
+  },
+  "840": {
+    "origin": "Broadway & 14th St",
+    "terminus": "Eastmont Transit Center"
+  },
+  "655": {
+    "origin": "Montera Jr High School & Scout Rd",
+    "terminus": "Fruitvale BART"
+  },
+  "G": {
+    "origin": "Salesforce Transit Center Bay 12",
+    "terminus": "El Cerrito Plaza BART"
+  },
+  "696": {
+    "origin": "Broadway & Whitmore St",
+    "terminus": "Redwood Rd & Mountain Blvd (Lincoln Square)"
+  },
+  "689": {
+    "origin": "De Anza High School",
+    "terminus": "Richmond BART"
+  },
+  "667": {
+    "origin": "Market Av & 6th St",
+    "terminus": "Donal Av & Norvell St (Korematsu Middle School)"
+  },
+  "642": {
+    "origin": "Montera Jr High School & Scout Rd",
+    "terminus": "Snake Rd & Colton Blvd"
+  },
+  "802": {
+    "origin": "Broadway & 14th St (12th St BART)",
+    "terminus": "University Av & 3rd St"
+  },
+  "P": {
+    "origin": "Salesforce Transit Center Bay 17",
+    "terminus": "Highland Way & Highland Av"
+  },
+  "641": {
+    "origin": "Driscoll Rd & Hopkins Jr High School",
+    "terminus": "Mission Blvd & Grimmer Blvd"
+  },
+  "624": {
+    "origin": "Mission Blvd & Palm Av (Mission San Jose High)",
+    "terminus": "Paseo Padre Pkwy & Mission Blvd"
+  },
+  "E": {
+    "origin": "Caldecott Ln & Parkwood Community",
+    "terminus": "Salesforce Transit Center"
+  },
+  "639": {
+    "origin": "Fruitvale BART",
+    "terminus": "Skyline High School"
+  },
+  "625": {
+    "origin": "Fremont Blvd & Central Av",
+    "terminus": "Niles Blvd & El Portal Av"
+  },
+  "687": {
+    "origin": "Fernside Blvd & San Jose Av (Lincoln Middle Sch.)",
+    "terminus": "Island Dr & Bayfarm Park & Ride Lot"
+  },
+  "648": {
+    "origin": "Fruitvale BART",
+    "terminus": "Skyline High School"
+  },
+  "653": {
+    "origin": "Montera Jr High School & Scout Rd",
+    "terminus": "40th St & Broadway"
+  },
+  "654": {
+    "origin": "Skyline High School",
+    "terminus": "Fruitvale BART"
+  },
+  "620": {
+    "origin": "Cedar Blvd & Stevenson Blvd",
+    "terminus": "Lafayette Av & Christine St (Newark Jr High Sch.)"
+  },
+  "FS": {
+    "origin": "Salesforce Transit Center",
+    "terminus": "Solano Av & Colusa Av"
+  },
+  "633": {
+    "origin": "Harrison St & W MacArthur Blvd",
+    "terminus": "Park Blvd & Greenwood Av"
+  },
+  "678": {
+    "origin": "Broadway Av & 20th St",
+    "terminus": "De Anza High School"
+  },
+  "631": {
+    "origin": "Robert Davey Jr Dr & Packet Landing Rd",
+    "terminus": "Central Av & 3rd St"
+  },
+  "650": {
+    "origin": "Montera Jr High School & Scout Rd",
+    "terminus": "Seminary Av & International Blvd"
+  },
+  "675": {
+    "origin": "Richmond BART",
+    "terminus": "Donal Av & Norvell St (Korematsu Middle School)"
+  },
+  "605": {
+    "origin": "Lincoln Av & Head Royce School",
+    "terminus": "Shattuck Sq & Center St (Downtown Berkeley BART)"
+  },
+  "703": {
+    "origin": "Dublin/Pleasanton BART Station",
+    "terminus": "Salesforce Transit Center"
+  },
+  "688": {
+    "origin": "MacArthur Blvd & Lakeshore Av",
+    "terminus": "Hopkins St & California St"
+  },
+  "627": {
+    "origin": "Cedar Av & Newark High School Library",
+    "terminus": "Cedar Blvd & Forbes Dr"
+  },
+  "617": {
+    "origin": "Seminary Av & International Blvd",
+    "terminus": "Skyline High School"
+  },
+  "607": {
+    "origin": "23rd St & Alfreda Blvd (Richmond High School)",
+    "terminus": "Tewksbury Av & Castro St"
+  },
+  "621": {
+    "origin": "Thornton Av & Dusterberry Way (Thornton Jr High)",
+    "terminus": "Ardenwood Blvd & Commerce Dr"
+  },
+  "663": {
+    "origin": "Blanding Av & Broadway",
+    "terminus": "Central Av & 3rd St"
+  },
+  "NX3": {
+    "origin": "Marlow Dr & Foothill Blvd",
+    "terminus": "Salesforce Transit Center"
+  },
+  "681": {
+    "origin": "W Macdonald Av & Richmond Pkway",
+    "terminus": "Harry Ells Pl & Lovonya Dejean M School"
+  },
+  "677": {
+    "origin": "Montera Jr High School & Scout Rd",
+    "terminus": "Tunnel Rd & Skyline Blvd"
+  },
+  "652": {
+    "origin": "Skyline High School",
+    "terminus": "90th Av & International Blvd"
+  },
+  "702": {
+    "origin": "Pleasant Hill BART",
+    "terminus": "Salesforce Transit Center"
+  },
+  "660": {
+    "origin": "Broadway & Whitmore St",
+    "terminus": "Montera Jr High School & Scout Rd"
+  },
+  "680": {
+    "origin": "98th Av & Cherokee Av (Bishop O'Dowd High School)",
+    "terminus": "Lake Park Av & Lakeshore Av"
+  },
+  "669": {
+    "origin": "Crespi Middle School",
+    "terminus": "Contra Costa College"
+  },
+  "651": {
+    "origin": "11th St & Jefferson St",
+    "terminus": "Broadway & Whitmore St"
+  },
+  "629": {
+    "origin": "Newark Blvd & Lido Faire",
+    "terminus": "Cedar Av & Newark High School Library"
+  },
+  "701": {
+    "origin": "Pittsburg/Bay Point BART",
+    "terminus": "Salesforce Transit Center"
+  },
+  "606": {
+    "origin": "Highland Av & Moraga Av",
+    "terminus": "Lincoln Av & Head Royce School"
+  },
+  "604": {
+    "origin": "North Berkeley BART",
+    "terminus": "Lincoln Av & Head Royce School"
+  }
+}
