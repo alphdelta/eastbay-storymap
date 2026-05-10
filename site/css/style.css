@@ -1,8 +1,12 @@
 /* === Reset & Base === */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+button, input, select, textarea {
+  font-family: inherit;
+}
+
 body {
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: 'Ubuntu', 'Segoe UI', system-ui, -apple-system, sans-serif;
   display: flex;
   height: 100vh;
   overflow: hidden;
@@ -729,10 +733,10 @@ blockquote {
 /* === Circle Legend === */
 #live-legend {
   position: fixed;
-  bottom: 52px;
+  bottom: 64px;
   right: 24px;
   background: rgba(255,255,255,0.95);
-  padding: 8px 12px;
+  padding: 10px 14px;
   border-radius: 6px;
   font-size: 0.82rem;
   color: #333;
@@ -808,11 +812,16 @@ blockquote {
   padding: 6px 14px;
   border: none;
   background: #fff;
+  font-family: 'Ubuntu', 'Segoe UI', system-ui, sans-serif;
   font-size: 0.74rem;
   font-weight: 600;
   cursor: pointer;
   color: #555;
   transition: all 0.15s;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
 }
 
 .basemap-btn.active {
@@ -832,12 +841,14 @@ blockquote {
   z-index: 1000;
   display: flex;
   gap: 4px;
+  align-items: stretch;
 }
 
 #btn-reach-ratio, #btn-density-view {
   padding: 6px 14px;
   border: none;
   background: #fff;
+  font-family: 'Ubuntu', 'Segoe UI', system-ui, sans-serif;
   font-size: 0.74rem;
   font-weight: 600;
   cursor: pointer;
@@ -845,6 +856,15 @@ blockquote {
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   transition: all 0.15s;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+}
+
+#btn-reach-ratio sub {
+  font-size: 0.7em;
+  line-height: 0;
 }
 
 #btn-reach-ratio.active, #btn-density-view.active {
@@ -969,7 +989,7 @@ blockquote {
 }
 
 .leaflet-popup-content {
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: 'Ubuntu', 'Segoe UI', system-ui, sans-serif;
   font-size: 0.82rem;
   line-height: 1.5;
   margin: 8px 12px;

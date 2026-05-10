@@ -1846,6 +1846,12 @@ function enterOverlay2(center, features, skipAnimation) {
   dimLayersForZoom();
   setBasemap('satellite');
 
+  // Switch to Story tab
+  document.querySelectorAll('#tab-bar .tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelector('#tab-bar .tab-btn[data-tab="story"]').classList.add('active');
+  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  document.getElementById('tab-story').classList.add('active');
+
   if (skipAnimation) {
     map.setView(center, 15.5, { animate: false });
   } else {
