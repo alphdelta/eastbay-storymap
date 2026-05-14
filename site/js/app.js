@@ -281,7 +281,7 @@ function buildStoryStack(siteKey) {
   const testimonyHtml = (story.testimonies || []).map(item => `
     <div class="story-quote-card">
       <blockquote>${item.quote}</blockquote>
-      <p class="interview-attr">${item.attribution} · <a href="${item.sourceUrl}" target="_blank" rel="noopener noreferrer">${item.sourceLabel}</a></p>
+      <p class="interview-attr">${item.attribution}</p>
     </div>
   `).join('');
 
