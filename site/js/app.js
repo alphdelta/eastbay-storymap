@@ -285,11 +285,6 @@ function buildStoryStack(siteKey) {
     </div>
   `).join('');
 
-  const sourceHtml = (story.sources || []).map(item => item.url
-    ? `<li><a href="${item.url}" target="_blank" rel="noopener noreferrer">${item.label}</a></li>`
-    : `<li>${item.label}</li>`
-  ).join('');
-
   return `
     <section class="story-stack">
       <div class="story-section-card">
@@ -304,10 +299,6 @@ function buildStoryStack(siteKey) {
       <div class="story-section-card">
         <div class="story-kicker">Community voice</div>
         ${testimonyHtml}
-      </div>
-      <div class="story-section-card">
-        <div class="story-kicker">Sources</div>
-        <ul class="story-source-list">${sourceHtml}</ul>
       </div>
     </section>
   `;
@@ -1704,19 +1695,31 @@ function showWalkthroughPage() {
       break;
     }
 
-    case 9: // Page 10: Thank you
+    case 9: { // Page 10: Thank you
       // Turn off density view
       if (densityMode) toggleDensityView();
+      const allSources = Object.entries(SITE_STORIES).flatMap(([site, s]) =>
+        (s.sources || []).map(src => ({ ...src, site }))
+      );
+      const srcHtml = allSources.map(s => s.url
+        ? `<li><a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.label}</a></li>`
+        : `<li>${s.label}</li>`
+      ).join('');
       wtContent.innerHTML = `
         <h2>Thank You</h2>
         <p>This map was created to visualize how infrastructure corridors fragment pedestrian access in the East Bay.</p>
         <p>Continue exploring by toggling routes in the Lines tab, viewing the R<sub>e</sub> or Density gradient views, or clicking any polygon on the map to see its detail view.</p>
+        <div class="story-section-card" style="margin-top:14px">
+          <div class="story-kicker">Sources</div>
+          <ul class="story-source-list">${srcHtml}</ul>
+        </div>
         <p class="hint">Press <b>Next</b> to return to the start, or click any polygon to explore on your own.</p>
       `;
       setBasemap(userBasemapPref);
       restoreLayerVisibility();
       map.setView([37.78, -122.20], 11, { animate: false });
       break;
+    }
 
     case 10: // Page 11: Back to launch (same as page 1)
       walkthroughIdx = 0;
