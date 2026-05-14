@@ -305,6 +305,113 @@ body {
 .control-badge { background: #6c757d !important; }
 .walk-badge { background: #d4a017 !important; }
 
+#site-story-stack {
+  margin-top: 12px;
+}
+
+.story-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.story-section-card {
+  background: #fafafa;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.story-kicker {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8d6b12;
+  margin-bottom: 8px;
+}
+
+.story-note {
+  font-size: 0.72rem !important;
+  color: #8a8a8a !important;
+  margin-bottom: 0 !important;
+}
+
+.story-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.story-art-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.story-art-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 240px;
+  object-fit: cover;
+  background: #f0f0f0;
+}
+
+.story-art-meta {
+  padding: 10px;
+}
+
+.story-art-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.story-art-title {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.story-emotion {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #a06b00;
+  white-space: nowrap;
+}
+
+.story-credit {
+  font-size: 0.7rem;
+  color: #888;
+}
+
+.story-quote-card + .story-quote-card {
+  margin-top: 10px;
+}
+
+.story-source-list {
+  padding-left: 18px;
+}
+
+.story-source-list li {
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.story-source-list a {
+  color: #2457a6;
+  text-decoration: none;
+}
+
+.story-source-list a:hover {
+  text-decoration: underline;
+}
+
 /* === Stat Cards === */
 #site-stats-container, #control-stats, #walk-stats, #route-summary-stats {
   margin-bottom: 14px;
@@ -356,6 +463,9 @@ body {
 #site-pie-chart {
   margin-top: 12px;
   padding: 10px 12px;
+  background: #fafafa;
+  border: 1px solid #ececec;
+  border-radius: 10px;
 }
 
 .pie-chart-title {
