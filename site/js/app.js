@@ -68,7 +68,7 @@ const CONTROL_SITES = [
 
 const SITE_STORIES = {
   'Channing x California, Berkeley': {
-    summary: 'This is the countermapping control where the street grid still behaves almost like the theoretical circle. But nearby South Berkeley murals show why that clean geometry is not the whole story: residents used art to preserve memory, hold history in public, and insist that movement through a neighborhood should still belong to the people living there.',
+    summary: 'This control site sits in Berkeley\'s well-connected street grid, where the walk polygon stays close to circular. But the neighborhood\'s high walkability exists alongside ongoing struggles over traffic safety, displacement, and who the streets are really built for.',
     arc: [
       {
         title: 'Opening',
@@ -76,11 +76,11 @@ const SITE_STORIES = {
       },
       {
         title: 'Countermap',
-        text: 'A few blocks away on Ashby, “The Invisible Becomes Visible” turns the corridor into a public timeline. Instead of reducing the area to circulation, the mural foregrounds Ohlone presence, migration, labor, civil rights, and neighborhood figures who are usually omitted from transportation maps.'
+        text: 'But walkability on paper does not mean safety in practice. Adeline Street, just blocks away, is a Vision Zero High Injury Street. Residents have fought for lane reductions, safer crossings, and a greenway — demanding that the corridor serve people walking, not just cars passing through.'
       },
       {
         title: 'What the metric misses',
-        text: 'The site reminds us that a strong reach ratio is not the same thing as a complete place story. Countermapping means holding both truths together: measurable permeability and lived memory.'
+        text: 'A strong reach ratio is not the same as a livable street. The grid connects, but residents still organize to reclaim space from speeding traffic and displacement. Countermapping means measuring permeability and asking: permeability for whom?'
       }
     ],
     gallery: [
@@ -110,39 +110,38 @@ const SITE_STORIES = {
       }
     ],
     testimonies: [
+    testimonies: [
       {
-        quote: 'Art has a lot to do with social justice, too. We all felt that we wanted to go and make a statement.',
-        attribution: 'Edythe Boone, muralist',
-        sourceLabel: 'Berkeleyside, 2018',
-        sourceUrl: 'https://berkeleyside.org/2018/09/07/new-mural-is-a-timeline-of-south-berkeley-from-the-ohlones-to-the-present-day'
+        quote: 'We envision a mixed-income transit village with a thriving Flea Market, a greenway with parks and bike lanes, housing for all — and slow streets made safe for our elders, children, drivers, transit users, pedestrians and bicyclists.',
+        attribution: 'South Berkeley Now! (173 members)',
+        sourceLabel: 'Berkeleyside, 2019',
+        sourceUrl: 'https://www.berkeleyside.org/2019/09/06/opinion-south-berkeley-needs-safer-streets-and-more-neighbors'
       },
       {
-        quote: 'I had a very diverse team. I had trans; I had gay women, couples, men; I had black, white, Chinese, Japanese.',
-        attribution: 'Edythe Boone, muralist',
-        sourceLabel: 'Berkeleyside, 2018',
-        sourceUrl: 'https://berkeleyside.org/2018/09/07/new-mural-is-a-timeline-of-south-berkeley-from-the-ohlones-to-the-present-day'
+        quote: 'South Berkeley needs safer streets and more neighbors. As currently written, the Adeline Plan will result in more of the same — speeding traffic, a lack of affordable housing, and displacement of our neighbors.',
+        attribution: 'South Berkeley Now!',
+        sourceLabel: 'Berkeleyside, 2019',
+        sourceUrl: 'https://www.berkeleyside.org/2019/09/06/opinion-south-berkeley-needs-safer-streets-and-more-neighbors'
       },
       {
-        quote: 'People live with the art, so you’re charged with the responsibility of co-creating their environment.',
-        attribution: 'Ellie Brumbaum, artist',
-        sourceLabel: 'Berkeleyside, 2018',
-        sourceUrl: 'https://berkeleyside.org/2018/09/07/new-mural-is-a-timeline-of-south-berkeley-from-the-ohlones-to-the-present-day'
-      },
-      {
-        quote: 'The project ultimately has inspired the community to stay connected to and take pride in a deep cultural history that will slip away if not preserved.',
-        attribution: 'Friends of Adeline community mural project',
-        sourceLabel: 'Friends of Adeline',
-        sourceUrl: 'https://www.friendsofadeline.org/community-mural-project/'
+        quote: 'The City Council talks about climate urgency, they talk about banning combustion engines. But there\'s no car-free options for Telegraph? Really?',
+        attribution: 'Brandon James Yung, Telegraph for People',
+        sourceLabel: 'Streetsblog SF, 2022',
+        sourceUrl: 'https://sf.streetsblog.org/2022/01/31/berkeley-students-craft-car-free-option-for-telegraph'
       }
     ],
     sources: [
       {
-        label: 'Berkeleyside — “New mural is a timeline of South Berkeley, from the Ohlone to the present day”',
-        url: 'https://berkeleyside.org/2018/09/07/new-mural-is-a-timeline-of-south-berkeley-from-the-ohlones-to-the-present-day'
+        label: 'Berkeleyside — "South Berkeley needs safer streets and more neighbors"',
+        url: 'https://www.berkeleyside.org/2019/09/06/opinion-south-berkeley-needs-safer-streets-and-more-neighbors'
       },
       {
-        label: 'Friends of Adeline — The Invisible Becomes Visible community mural project',
-        url: 'https://www.friendsofadeline.org/community-mural-project/'
+        label: 'Streetsblog SF — "Berkeley Students Craft Car-Free Option for Telegraph"',
+        url: 'https://sf.streetsblog.org/2022/01/31/berkeley-students-craft-car-free-option-for-telegraph'
+      },
+      {
+        label: 'City of Berkeley — Adeline Corridor Specific Plan',
+        url: 'https://berkeleyca.gov/your-government/our-work/adopted-plans/adeline-corridor-specific-plan'
       }
     ]
   },
@@ -155,11 +154,11 @@ const SITE_STORIES = {
       },
       {
         title: 'Countermap',
-        text: 'Instead of treating the right-of-way as leftover space, residents and artists have turned it into a place of murals, sculpture, planting, play, exercise, and everyday travel. The path is still about getting from A to B, but it also accumulates pause, memory, and belonging.'
+        text: 'Instead of dead infrastructure, the greenway has become a daily commute route, exercise path, and neighborhood commons. 81% of surveyed users walk, run, or bike it. Over half live within a quarter mile. It is not recreational scenery — it is how people actually move through their day.'
       },
       {
         title: 'What the metric misses',
-        text: 'This is the strongest example of the deck’s argument that humans keep making meaning in negative space. The reach ratio captures permeability; the photos and testimonies capture the emotional and social life that standard buffers ignore.'
+        text: 'The reach ratio captures geometric permeability, but the Greenway shows that livability also depends on lighting, safety at intersections, and whether the path feels welcoming at night. The City\'s 2023 survey of 609 residents documented exactly these gaps — the things a polygon cannot hold.'
       }
     ],
     gallery: [
@@ -253,29 +252,24 @@ const SITE_STORIES = {
       }
     ],
     testimonies: [
+    testimonies: [
       {
-        quote: 'Many times, biking along the greenway from Berkeley to Albany proved to be faster than driving the same distance.',
+        quote: 'Biking along the greenway from Berkeley to Albany proved to be faster than driving the same distance. Economic efficiency, better health, and personal happiness all rolled into one.',
         attribution: 'Graham Freeman, Looking Beyond Tomorrow',
         sourceLabel: 'Looking Beyond Tomorrow, 2015',
         sourceUrl: 'https://gjmf.wordpress.com/2015/12/12/ohlone-greenway/'
       },
       {
-        quote: 'Economic efficiency, better health, and personal happiness all rolled into one.',
-        attribution: 'Graham Freeman, Looking Beyond Tomorrow',
-        sourceLabel: 'Looking Beyond Tomorrow, 2015',
-        sourceUrl: 'https://gjmf.wordpress.com/2015/12/12/ohlone-greenway/'
+        quote: '81% of Greenway users walk, run, or bike. 57% use it for shopping and errands — not just recreation. Over half live within a quarter mile.',
+        attribution: 'City of Berkeley Ohlone Greenway Survey (609 respondents)',
+        sourceLabel: 'City of Berkeley, 2023',
+        sourceUrl: 'https://berkeleyca.gov/sites/default/files/documents/Ohlone%20Greenway%20Online%20Survey%20Results.pdf'
       },
       {
-        quote: 'We should be engaging with local artists to find ways to beautify the Greenway and the stations. We need to mitigate some of the harsher elements at the stations.',
-        attribution: 'Rita Baruch, Richmond resident',
-        sourceLabel: 'East Bay Times, 2015',
-        sourceUrl: 'https://preprod.eastbaytimes.com/2017/11/17/albany-to-dedicate-ohlone-greenway-projects/'
-      },
-      {
-        quote: 'The designs that are being proposed are pretty, but not very functional.',
-        attribution: 'Hal Schultz, El Cerrito resident',
-        sourceLabel: 'East Bay Times, 2015',
-        sourceUrl: 'https://staging.eastbaytimes.com/2015/06/22/el-cerrito-planning-upgrades-around-bart-stations/'
+        quote: 'The goals are to upgrade the multi-use pathway to better accommodate the needs of all users and improve safety, especially at roadway intersections and at night.',
+        attribution: 'City of Berkeley, Ohlone Greenway Safety Improvements Project',
+        sourceLabel: 'City of Berkeley, 2023',
+        sourceUrl: 'https://berkeleyca.gov/your-government/our-work/capital-projects/ohlone-greenway-safety-improvements-project'
       }
     ],
     sources: [
@@ -284,25 +278,21 @@ const SITE_STORIES = {
         url: ''
       },
       {
-        label: 'Fernanda Martinez — Ohlone Greenway mural',
-        url: 'https://www.fernandamartinezart.com/murals-1/ohlonegreenway'
+        label: 'City of Berkeley — Ohlone Greenway Safety Improvements Project',
+        url: 'https://berkeleyca.gov/your-government/our-work/capital-projects/ohlone-greenway-safety-improvements-project'
+      },
+      {
+        label: 'City of Berkeley — Ohlone Greenway Survey Results (609 respondents)',
+        url: 'https://berkeleyca.gov/sites/default/files/documents/Ohlone%20Greenway%20Online%20Survey%20Results.pdf'
       },
       {
         label: 'Looking Beyond Tomorrow — Ohlone Greenway',
         url: 'https://gjmf.wordpress.com/2015/12/12/ohlone-greenway/'
-      },
-      {
-        label: 'East Bay Times — Albany to dedicate Ohlone Greenway projects',
-        url: 'https://preprod.eastbaytimes.com/2017/11/17/albany-to-dedicate-ohlone-greenway-projects/'
-      },
-      {
-        label: 'East Bay Times — El Cerrito planning upgrades around BART stations',
-        url: 'https://staging.eastbaytimes.com/2015/06/22/el-cerrito-planning-upgrades-around-bart-stations/'
       }
     ]
   },
   'Jack London Square, Oakland': {
-    summary: 'Jack London is the counterexample at the other end of the spectrum: the polygon is visibly shattered by rail, freeway, and water, yet the district’s mural culture keeps insisting on public life at the waterfront edge.',
+    summary: 'Jack London is the counterexample at the other end of the spectrum: the polygon is visibly shattered by rail, freeway, and water. I-880 severs downtown Oakland from the waterfront, compressing pedestrian access into a handful of hostile underpasses.',
     arc: [
       {
         title: 'Opening',
@@ -310,11 +300,11 @@ const SITE_STORIES = {
       },
       {
         title: 'Countermap',
-        text: 'The mural festival and self-guided art tour answer that hardness with public image-making. Walls facing tracks and industrial edges become surfaces for Oakland identity, migration stories, dance, and social memory.'
+        text: 'Stand in downtown Oakland and look around and it can be easy to forget it\'s a coastal city. That\'s because Interstate 880 cuts a giant, uninviting swath between the city center and the waterfront. The Walk This Way project aims to transform the underpasses into safe, walkable passageways — but the barrier remains.'
       },
       {
         title: 'What the metric misses',
-        text: 'Jack London shows the project’s full tension: a site can be spatially constrained and still culturally dense. Countermapping means documenting both the amputation of the walk and the stubborn social life that remains.'
+        text: 'Jack London shows the project\'s full tension: more than half the ground-floor commercial space sits vacant, foot traffic has declined, and businesses have closed. A shattered polygon is not just a geometric abstraction — it means fewer people walking, fewer encounters, less public life.'
       }
     ],
     gallery: [
@@ -352,43 +342,44 @@ const SITE_STORIES = {
       }
     ],
     testimonies: [
+    testimonies: [
       {
-        quote: 'This festival is a celebration of public art and a way of uniting a community through local collaborations.',
-        attribution: 'Sarah Siskin, Bay Area Mural Festival founder',
-        sourceLabel: 'Port of Oakland, 2018',
-        sourceUrl: 'https://www.portofoakland.com/jack-london-square-free-pop-gallery-showcases-muralists-local-artists'
+        quote: 'Stand in downtown Oakland and look around and it can be easy to forget it\'s a coastal city. That\'s because Interstate 880 cuts a giant, uninviting swath between the city center and the waterfront at Jack London Square.',
+        attribution: 'Roger Rudick, Streetsblog SF',
+        sourceLabel: 'Streetsblog SF, 2017',
+        sourceUrl: 'https://sf.streetsblog.org/2017/05/25/spur-talk-reconnecting-oakland-to-its-waterfront/'
       },
       {
-        quote: 'A lot of times, mural lovers in the community don’t even see when new projects are going up, so we’re trying to highlight the actual process of how a mural is created.',
-        attribution: 'Sarah Siskin, Bay Area Mural Festival director',
-        sourceLabel: 'East Bay Express, 2018',
-        sourceUrl: 'https://eastbayexpress.com/artists-to-paint-the-town-during-weeklong-oakland-mural-festival-2-1/'
+        quote: 'People detest the freeway barrier. People will organize their whole lives in a way that they don\'t have to cross the freeway to get to other parts of Oakland.',
+        attribution: 'Savlan Hauser, Jack London Improvement District',
+        sourceLabel: 'Streetsblog SF / SPUR, 2017',
+        sourceUrl: 'https://sf.streetsblog.org/2017/05/25/spur-talk-reconnecting-oakland-to-its-waterfront/'
       },
       {
-        quote: 'When people come up and they talk to you, that energy is coming into the piece and those ideas can come into the piece.',
-        attribution: 'Alise Eastgate, mural artist',
-        sourceLabel: 'East Bay Express, 2018',
-        sourceUrl: 'https://eastbayexpress.com/artists-to-paint-the-town-during-weeklong-oakland-mural-festival-2-1/'
+        quote: 'People are just afraid to drive out here and leave their cars parked. The market has been in a bit of a struggle.',
+        attribution: 'Raul Castro, Alameda resident; Kyle Wiggins, Farmers Market Association',
+        sourceLabel: 'CBS San Francisco, 2025',
+        sourceUrl: 'https://www.cbsnews.com/sanfrancisco/news/oakland-jack-london-square-traffic-decline-impacts/'
       },
       {
-        quote: 'We’re community muralists. It’s all about building with the people where they’re at, and providing the environment that allows them to feel welcome there.',
-        attribution: 'James Shields, Creative Shields',
-        sourceLabel: 'East Bay Express, 2018',
-        sourceUrl: 'https://eastbayexpress.com/artists-to-paint-the-town-during-weeklong-oakland-mural-festival-2-1/'
+        quote: 'This will lift those restrictions for 40 years. It\'s a game-changer, and it\'s going to help fill some of these ground-floor vacancies and bring life back to Jack London Square.',
+        attribution: 'Sen. Jesse Arregu\u00edn (D-Oakland)',
+        sourceLabel: 'KTVU, 2025',
+        sourceUrl: 'https://www.ktvu.com/news/oaklands-jack-london-square-poised-change-new-law-loosens-restrictions'
       }
     ],
     sources: [
       {
-        label: 'Visit Oakland — Jack London mural tour',
-        url: 'https://www.visitoakland.com/things-to-do/tours/self-guided/jack-london-mural-tour/'
+        label: 'Streetsblog SF \u2014 "Reconnecting Oakland to its Waterfront" (SPUR)',
+        url: 'https://sf.streetsblog.org/2017/05/25/spur-talk-reconnecting-oakland-to-its-waterfront/'
       },
       {
-        label: 'Port of Oakland — Jack London Square pop-up gallery and muralists',
-        url: 'https://www.portofoakland.com/jack-london-square-free-pop-gallery-showcases-muralists-local-artists'
+        label: 'CBS San Francisco \u2014 "Foot traffic at Jack London Square declines"',
+        url: 'https://www.cbsnews.com/sanfrancisco/news/oakland-jack-london-square-traffic-decline-impacts/'
       },
       {
-        label: 'East Bay Express — Oakland Mural Festival in Jack London',
-        url: 'https://eastbayexpress.com/artists-to-paint-the-town-during-weeklong-oakland-mural-festival-2-1/'
+        label: 'KTVU \u2014 "Jack London Square poised for change with new law"',
+        url: 'https://www.ktvu.com/news/oaklands-jack-london-square-poised-change-new-law-loosens-restrictions'
       }
     ]
   }
