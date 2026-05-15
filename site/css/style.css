@@ -16,8 +16,8 @@ body {
 
 /* === Sidebar === */
 #sidebar {
-  width: 420px;
-  min-width: 420px;
+  width: 520px;
+  min-width: 520px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -309,6 +309,30 @@ body {
   margin-top: 12px;
 }
 
+.story-stack-rich {
+  gap: 14px;
+}
+
+.story-arc {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.story-arc-step {
+  padding-left: 12px;
+  border-left: 3px solid #d4a017;
+}
+
+.story-arc-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #7b5d10;
+  margin-bottom: 4px;
+}
+
 .story-stack {
   display: flex;
   flex-direction: column;
@@ -354,7 +378,7 @@ body {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 240px;
+  max-height: 280px;
   object-fit: cover;
   background: #f0f0f0;
 }
@@ -382,11 +406,19 @@ body {
   font-weight: 600;
   color: #a06b00;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .story-credit {
   font-size: 0.7rem;
   color: #888;
+}
+
+.story-quote-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 10px;
 }
 
 .story-quote-card + .story-quote-card {

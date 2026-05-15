@@ -68,14 +68,44 @@ const CONTROL_SITES = [
 
 const SITE_STORIES = {
   'Channing x California, Berkeley': {
-    summary: 'Near the Berkeley control, the story shifts from geometry to memory: public art on nearby Ashby Avenue turns the corridor into a civic timeline shaped by residents.',
+    summary: 'This is the countermapping control where the street grid still behaves almost like the theoretical circle. But nearby South Berkeley murals show why that clean geometry is not the whole story: residents used art to preserve memory, hold history in public, and insist that movement through a neighborhood should still belong to the people living there.',
+    arc: [
+      {
+        title: 'Opening',
+        text: 'Near Channing, the walk polygon stays close to isotropic: streets connect, crossings are frequent, and very little of the half-mile circle is amputated. It is useful as a control precisely because it shows what the metric looks like when the grid is mostly intact.'
+      },
+      {
+        title: 'Countermap',
+        text: 'A few blocks away on Ashby, “The Invisible Becomes Visible” turns the corridor into a public timeline. Instead of reducing the area to circulation, the mural foregrounds Ohlone presence, migration, labor, civil rights, and neighborhood figures who are usually omitted from transportation maps.'
+      },
+      {
+        title: 'What the metric misses',
+        text: 'The site reminds us that a strong reach ratio is not the same thing as a complete place story. Countermapping means holding both truths together: measurable permeability and lived memory.'
+      }
+    ],
     gallery: [
       {
         src: 'assets/story/channing-south-berkeley-mural.jpg',
         alt: 'The Invisible Becomes Visible mural along Ashby Avenue in South Berkeley.',
-        title: 'The Invisible Becomes Visible',
+        title: 'Timeline wall',
         emotion: 'Pride + remembrance',
-        caption: 'A 100-foot mural on Ashby Avenue between Harper and Ellis layers Ohlone history, migration, labor, and neighborhood figures into one street-facing narrative.',
+        caption: 'The 100-foot mural layers Ohlone history, migration, labor, and neighborhood figures into one street-facing civic timeline.',
+        credit: 'Photo via Berkeleyside / Daniel McPartlan'
+      },
+      {
+        src: 'assets/story/channing-waving-man.jpg',
+        alt: 'Detail of Joseph Charles, the Waving Man, in the South Berkeley mural.',
+        title: 'Neighborhood figure',
+        emotion: 'Recognition',
+        caption: 'Joseph Charles, the Waving Man, turns the wall from abstract history into local recognition: this is a neighborhood naming its own people.',
+        credit: 'Photo via Berkeleyside / Daniel McPartlan'
+      },
+      {
+        src: 'assets/story/channing-detail.jpg',
+        alt: 'Painted detail from The Invisible Becomes Visible mural in South Berkeley.',
+        title: 'Shared history detail',
+        emotion: 'Care + witness',
+        caption: 'Close details reveal how the mural works at pedestrian scale, rewarding slow looking instead of just drive-by visibility.',
         credit: 'Photo via Berkeleyside / Daniel McPartlan'
       }
     ],
@@ -87,10 +117,22 @@ const SITE_STORIES = {
         sourceUrl: 'https://berkeleyside.org/2018/09/07/new-mural-is-a-timeline-of-south-berkeley-from-the-ohlones-to-the-present-day'
       },
       {
+        quote: 'I had a very diverse team. I had trans; I had gay women, couples, men; I had black, white, Chinese, Japanese.',
+        attribution: 'Edythe Boone, muralist',
+        sourceLabel: 'Berkeleyside, 2018',
+        sourceUrl: 'https://berkeleyside.org/2018/09/07/new-mural-is-a-timeline-of-south-berkeley-from-the-ohlones-to-the-present-day'
+      },
+      {
         quote: 'People live with the art, so you’re charged with the responsibility of co-creating their environment.',
         attribution: 'Ellie Brumbaum, artist',
         sourceLabel: 'Berkeleyside, 2018',
         sourceUrl: 'https://berkeleyside.org/2018/09/07/new-mural-is-a-timeline-of-south-berkeley-from-the-ohlones-to-the-present-day'
+      },
+      {
+        quote: 'The project ultimately has inspired the community to stay connected to and take pride in a deep cultural history that will slip away if not preserved.',
+        attribution: 'Friends of Adeline community mural project',
+        sourceLabel: 'Friends of Adeline',
+        sourceUrl: 'https://www.friendsofadeline.org/community-mural-project/'
       }
     ],
     sources: [
@@ -105,22 +147,28 @@ const SITE_STORIES = {
     ]
   },
   'Ohlone Greenway': {
-    summary: 'Your Ohlone Greenway photos read as a sequence of delight, memory, motion, and belonging: the greenway works as park, path, and open-air gallery at once.',
-    gallery: [
+    summary: 'The Ohlone Greenway is the countermapping hinge of the project: a transportation corridor that has been reclaimed as park, shortcut, mural wall, exercise space, and neighborhood commons. Your photos make that argument better than a single metric can.',
+    arc: [
       {
-        src: 'assets/story/ohlone-flowers.jpg',
-        alt: 'Floral mural and poppies along the Ohlone Greenway.',
-        title: 'Floral wall',
-        emotion: 'Delight',
-        caption: 'Painted flowers echo the planted poppies in front of them, making the greenway feel tended rather than leftover.',
-        credit: 'User field photo'
+        title: 'Opening',
+        text: 'Under the BART Richmond Branch, the greenway starts from the same corridor logic as the rest of the project: a linear infrastructure spine built for movement. But on the ground it feels different from the highway-adjacent sites.'
       },
+      {
+        title: 'Countermap',
+        text: 'Instead of treating the right-of-way as leftover space, residents and artists have turned it into a place of murals, sculpture, planting, play, exercise, and everyday travel. The path is still about getting from A to B, but it also accumulates pause, memory, and belonging.'
+      },
+      {
+        title: 'What the metric misses',
+        text: 'This is the strongest example of the deck’s argument that humans keep making meaning in negative space. The reach ratio captures permeability; the photos and testimonies capture the emotional and social life that standard buffers ignore.'
+      }
+    ],
+    gallery: [
       {
         src: 'assets/story/ohlone-history-wide.jpg',
         alt: 'Wide view of a history mural along the Ohlone Greenway.',
         title: 'History mural',
         emotion: 'Collective memory',
-        caption: 'This panoramic mural turns the wall into a timeline of land, labor, transit, and migration.',
+        caption: 'The panoramic wall reads like a public timeline of land, labor, transit, and migration beside the trail.',
         credit: 'User field photo'
       },
       {
@@ -128,7 +176,7 @@ const SITE_STORIES = {
         alt: 'Detail view of figures gathered in the Ohlone Greenway history mural.',
         title: 'History detail',
         emotion: 'Solidarity',
-        caption: 'The close-up centers crowds, workers, and waterfront life, emphasizing people over infrastructure.',
+        caption: 'The close-up centers people over infrastructure, making the corridor feel inhabited rather than merely engineered.',
         credit: 'User field photo'
       },
       {
@@ -136,15 +184,23 @@ const SITE_STORIES = {
         alt: 'Wide view of bicycle and transit mural on the Ohlone Greenway.',
         title: 'Bike + transit mural',
         emotion: 'Motion + possibility',
-        caption: 'Transit, bicycling, and neighborhood life are painted into the same frame, matching how the trail stitches trips together.',
+        caption: 'Transit, bicycling, and neighborhood life share the same wall, matching the greenway’s role as both path and commons.',
         credit: 'User field photo'
       },
       {
         src: 'assets/story/ohlone-bike-detail.jpg',
         alt: 'Detail of cyclist and pedestrian from bicycle mural on the Ohlone Greenway.',
-        title: 'Bike mural detail',
+        title: 'Shared route detail',
         emotion: 'Care + continuity',
-        caption: 'The cyclist and older pedestrian share the same painted route, suggesting mobility across age and pace.',
+        caption: 'The cyclist and older pedestrian occupy the same painted route, suggesting mobility across pace, age, and purpose.',
+        credit: 'User field photo'
+      },
+      {
+        src: 'assets/story/ohlone-flowers.jpg',
+        alt: 'Floral mural and poppies along the Ohlone Greenway.',
+        title: 'Floral wall',
+        emotion: 'Delight',
+        caption: 'Painted flowers echo planted poppies in front of them, making the corridor feel tended rather than leftover.',
         credit: 'User field photo'
       },
       {
@@ -152,7 +208,31 @@ const SITE_STORIES = {
         alt: 'Figure mural beside the Ohlone Greenway path.',
         title: 'Figure mural',
         emotion: 'Reflection',
-        caption: 'This wall feels quieter and more interior, a pause in the greenway’s faster rhythm of cycling and movement.',
+        caption: 'A quieter portrait interrupts the faster rhythm of cycling and commuting with a more interior mood.',
+        credit: 'User field photo'
+      },
+      {
+        src: 'assets/story/ohlone-ride-mural.jpg',
+        alt: 'Riding past a mural on the Ohlone Greenway.',
+        title: 'Rider’s-eye view',
+        emotion: 'Flow',
+        caption: 'This rider’s-eye photo makes the argument spatially: the art is encountered in motion, not set apart from daily travel.',
+        credit: 'User field photo'
+      },
+      {
+        src: 'assets/story/ohlone-plaza.jpg',
+        alt: 'Exercise and plaza space along the Ohlone Greenway.',
+        title: 'Exercise plaza',
+        emotion: 'Usefulness',
+        caption: 'The greenway is not only scenic; it has been equipped for exercise, rest, and repeat use by neighbors.',
+        credit: 'User field photo'
+      },
+      {
+        src: 'assets/story/ohlone-fire-circle.jpg',
+        alt: 'Circular seating area along the Ohlone Greenway.',
+        title: 'Circle of rest',
+        emotion: 'Pause',
+        caption: 'A circular seating area introduces gathering and lingering into a corridor otherwise defined by linear movement.',
         credit: 'User field photo'
       },
       {
@@ -174,10 +254,22 @@ const SITE_STORIES = {
     ],
     testimonies: [
       {
+        quote: 'Many times, biking along the greenway from Berkeley to Albany proved to be faster than driving the same distance.',
+        attribution: 'Graham Freeman, Looking Beyond Tomorrow',
+        sourceLabel: 'Looking Beyond Tomorrow, 2015',
+        sourceUrl: 'https://gjmf.wordpress.com/2015/12/12/ohlone-greenway/'
+      },
+      {
+        quote: 'Economic efficiency, better health, and personal happiness all rolled into one.',
+        attribution: 'Graham Freeman, Looking Beyond Tomorrow',
+        sourceLabel: 'Looking Beyond Tomorrow, 2015',
+        sourceUrl: 'https://gjmf.wordpress.com/2015/12/12/ohlone-greenway/'
+      },
+      {
         quote: 'We should be engaging with local artists to find ways to beautify the Greenway and the stations. We need to mitigate some of the harsher elements at the stations.',
         attribution: 'Rita Baruch, Richmond resident',
         sourceLabel: 'East Bay Times, 2015',
-        sourceUrl: 'https://staging.eastbaytimes.com/2015/06/22/el-cerrito-planning-upgrades-around-bart-stations/'
+        sourceUrl: 'https://preprod.eastbaytimes.com/2017/11/17/albany-to-dedicate-ohlone-greenway-projects/'
       },
       {
         quote: 'The designs that are being proposed are pretty, but not very functional.',
@@ -196,28 +288,66 @@ const SITE_STORIES = {
         url: 'https://www.fernandamartinezart.com/murals-1/ohlonegreenway'
       },
       {
+        label: 'Looking Beyond Tomorrow — Ohlone Greenway',
+        url: 'https://gjmf.wordpress.com/2015/12/12/ohlone-greenway/'
+      },
+      {
+        label: 'East Bay Times — Albany to dedicate Ohlone Greenway projects',
+        url: 'https://preprod.eastbaytimes.com/2017/11/17/albany-to-dedicate-ohlone-greenway-projects/'
+      },
+      {
         label: 'East Bay Times — El Cerrito planning upgrades around BART stations',
         url: 'https://staging.eastbaytimes.com/2015/06/22/el-cerrito-planning-upgrades-around-bart-stations/'
       }
     ]
   },
   'Jack London Square, Oakland': {
-    summary: 'At Jack London, art sits against cranes, rail, and the waterfront: the district uses murals to humanize an industrial edge while keeping Oakland’s identity visible.',
+    summary: 'Jack London is the counterexample at the other end of the spectrum: the polygon is visibly shattered by rail, freeway, and water, yet the district’s mural culture keeps insisting on public life at the waterfront edge.',
+    arc: [
+      {
+        title: 'Opening',
+        text: 'Here the half-mile circle fails most dramatically. Rail lines, the estuary, and I-880 compress movement into a narrow set of approaches, so the polygon exposes the corridor as a hard physical barrier.'
+      },
+      {
+        title: 'Countermap',
+        text: 'The mural festival and self-guided art tour answer that hardness with public image-making. Walls facing tracks and industrial edges become surfaces for Oakland identity, migration stories, dance, and social memory.'
+      },
+      {
+        title: 'What the metric misses',
+        text: 'Jack London shows the project’s full tension: a site can be spatially constrained and still culturally dense. Countermapping means documenting both the amputation of the walk and the stubborn social life that remains.'
+      }
+    ],
     gallery: [
+      {
+        src: 'assets/story/jack-london-turfin.jpg',
+        alt: 'Turfin mural in the Jack London district of Oakland.',
+        title: 'Turfin arrival wall',
+        emotion: 'Defiance',
+        caption: 'Facing the train approach, this mural makes Oakland culture one of the first images riders encounter as they enter the district.',
+        credit: 'Visit Oakland'
+      },
       {
         src: 'assets/story/jack-london-earth-sanctuary.jpg',
         alt: 'Earth Sanctuary mural featured in Jack London mural tour.',
-        title: 'Jack London mural tour',
+        title: 'Earth Sanctuary',
         emotion: 'Wonder',
-        caption: 'Visit Oakland frames Jack London as an urban gallery where waterfront views and murals are experienced together.',
+        caption: 'The waterfront mural tour frames Jack London as an outdoor gallery where port infrastructure and public art occupy the same visual field.',
+        credit: 'Visit Oakland'
+      },
+      {
+        src: 'assets/story/jack-london-earth-sanctuary-2.jpg',
+        alt: 'Alternate view of the Earth Sanctuary mural in Jack London Square.',
+        title: 'Waterfront mural detail',
+        emotion: 'Breath',
+        caption: 'Oceanic imagery softens the industrial edge without pretending the edge is gone.',
         credit: 'Visit Oakland'
       },
       {
         src: 'assets/story/jack-london-muralists.jpg',
         alt: 'Artists and muralists featured at Jack London Square pop-up gallery.',
-        title: 'Mural festival at the waterfront',
+        title: 'Muralists at work',
         emotion: 'Energy',
-        caption: 'The district’s mural festival made the making process public, turning the square into a gathering space as well as a viewing space.',
+        caption: 'The festival made the act of painting public, turning spectatorship into participation and conversation.',
         credit: 'Port of Oakland'
       }
     ],
@@ -227,6 +357,18 @@ const SITE_STORIES = {
         attribution: 'Sarah Siskin, Bay Area Mural Festival founder',
         sourceLabel: 'Port of Oakland, 2018',
         sourceUrl: 'https://www.portofoakland.com/jack-london-square-free-pop-gallery-showcases-muralists-local-artists'
+      },
+      {
+        quote: 'A lot of times, mural lovers in the community don’t even see when new projects are going up, so we’re trying to highlight the actual process of how a mural is created.',
+        attribution: 'Sarah Siskin, Bay Area Mural Festival director',
+        sourceLabel: 'East Bay Express, 2018',
+        sourceUrl: 'https://eastbayexpress.com/artists-to-paint-the-town-during-weeklong-oakland-mural-festival-2-1/'
+      },
+      {
+        quote: 'When people come up and they talk to you, that energy is coming into the piece and those ideas can come into the piece.',
+        attribution: 'Alise Eastgate, mural artist',
+        sourceLabel: 'East Bay Express, 2018',
+        sourceUrl: 'https://eastbayexpress.com/artists-to-paint-the-town-during-weeklong-oakland-mural-festival-2-1/'
       },
       {
         quote: 'We’re community muralists. It’s all about building with the people where they’re at, and providing the environment that allows them to feel welcome there.',
@@ -264,6 +406,13 @@ function buildStoryStack(siteKey) {
   if (!story) return '';
   const summaryHtml = story.summary ? `<p>${story.summary}</p>` : '';
 
+  const arcHtml = (story.arc || []).map(item => `
+    <div class="story-arc-step">
+      <div class="story-arc-title">${item.title}</div>
+      <p>${item.text}</p>
+    </div>
+  `).join('');
+
   const galleryHtml = (story.gallery || []).map(item => `
     <article class="story-art-card">
       <img src="${item.src}" alt="${item.alt}" loading="lazy">
@@ -286,11 +435,15 @@ function buildStoryStack(siteKey) {
   `).join('');
 
   return `
-    <section class="story-stack">
+    <section class="story-stack story-stack-rich">
       <div class="story-section-card">
         <div class="story-kicker">Place story</div>
         ${summaryHtml}
         <p class="story-note">Emotion labels are interpretive reads of the images, not sourced quotations.</p>
+      </div>
+      <div class="story-section-card">
+        <div class="story-kicker">Story arc</div>
+        <div class="story-arc">${arcHtml}</div>
       </div>
       <div class="story-section-card">
         <div class="story-kicker">Public art</div>
@@ -1536,8 +1689,9 @@ function showWalkthroughPage() {
     case 0: // Page 1: Launch
       wtContent.innerHTML = `
         <h2>Welcome</h2>
-        <p>This interactive map explores how freeways, BART lines, and rail corridors fragment the pedestrian network in the East Bay.</p>
-        <p>At each bus stop, a half-mile walking polygon reveals how much of the surrounding area is reachable on foot. Where infrastructure barriers intervene, the polygon shatters.</p>
+        <p>This interactive map counter-maps how freeways, BART lines, and rail corridors fragment the pedestrian network in the East Bay.</p>
+        <p>At each bus stop, a half-mile walking polygon reveals how much of the surrounding area is actually reachable on foot. The comparison is a permeability ratio: actual walkable area divided by the theoretical circle.</p>
+        <p>But the walkthrough also asks what the metric misses: the emotional, cultural, and social life people build within and against these corridors.</p>
         <p class="hint">Press <b>Next</b> to begin the guided tour.</p>
       `;
       setBasemap(userBasemapPref);
@@ -1558,7 +1712,7 @@ function showWalkthroughPage() {
       }).join('');
       wtContent.innerHTML = `
         <h2>Analysis Routes</h2>
-        <p>Toggle the following AC Transit bus line polygons on/off:</p>
+        <p>Toggle the four main AC Transit corridors used for the permeability comparison:</p>
         <div class="wt-toggle-grid">${toggleHtml}</div>
         <p class="hint" id="wt-toggle-hint">Toggle all four routes on to continue.</p>
       `;
@@ -1595,7 +1749,7 @@ function showWalkthroughPage() {
         const c = getCentroid(feat.geometry);
         wtContent.innerHTML = `
           <h2>Channing &times; California, Berkeley</h2>
-          <p>This control site sits in Berkeley's well-connected street grid, away from major infrastructure barriers. The walking polygon is nearly circular, showing strong pedestrian connectivity in all directions.</p>
+          <p>This control site sits in Berkeley's well-connected street grid, away from major infrastructure barriers. The walking polygon is nearly circular, showing what permeability looks like when the street network is largely intact.</p>
           <p>R<sub>e</sub> = <b>${(feat.properties.re_ratio || 0).toFixed(4)}</b></p>
           ${buildStoryStack('Channing x California, Berkeley')}
         `;
@@ -1610,7 +1764,7 @@ function showWalkthroughPage() {
         const c = getCentroid(feat.geometry);
         wtContent.innerHTML = `
           <h2>Ohlone Greenway</h2>
-          <p>The Ohlone Greenway follows a former railroad right-of-way through Albany and El Cerrito. While the greenway itself is a pedestrian path, the surrounding street network shows how legacy rail corridors shape modern walkability.</p>
+          <p>The Ohlone Greenway follows a former railroad right-of-way through Albany and El Cerrito. It is the project’s clearest countermapping example: infrastructure built for linear movement, then reclaimed as path, park, mural wall, and neighborhood commons.</p>
           <p>R<sub>e</sub> = <b>${(feat.properties.re_ratio || 0).toFixed(4)}</b></p>
           ${buildStoryStack('Ohlone Greenway')}
         `;
@@ -1624,7 +1778,7 @@ function showWalkthroughPage() {
       if (feat) {
         wtContent.innerHTML = `
           <h2>Jack London Square, Oakland</h2>
-          <p>Jack London Square sits at Oakland's waterfront, bounded by rail lines, I-880, and the estuary. Multiple infrastructure barriers converge here to constrain pedestrian access, creating a dramatically shattered polygon.</p>
+          <p>Jack London Square sits at Oakland's waterfront, bounded by rail lines, I-880, and the estuary. Multiple infrastructure barriers converge here to constrain pedestrian access, creating a dramatically shattered polygon even as the district remains culturally dense.</p>
           <p>R<sub>e</sub> = <b>${(feat.properties.re_ratio || 0).toFixed(4)}</b></p>
           ${buildStoryStack('Jack London Square, Oakland')}
         `;
