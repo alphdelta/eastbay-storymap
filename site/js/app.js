@@ -547,6 +547,14 @@ let neighborhoods = [];      // [{name, lat, lon, r}]
 let globalReMin = 1.0;
 let globalReMax = 0.0;
 
+// Countermapping overlay state (independent of Re/Density)
+let noiseMode = false;
+let noiseLayer = null;
+let communityMode = false;
+let communityLayer = null;
+let artifactsMode = false;
+let artifactsLayer = null;
+
 // Per-route navigation
 let currentRoute = null;     // null = overview, or route name string
 let currentRouteIdx = 0;     // index within current route's stop list
@@ -944,6 +952,11 @@ async function loadAllData() {
   document.getElementById('btn-reach-ratio').addEventListener('click', toggleReachRatioView);
   document.getElementById('btn-density-view').addEventListener('click', toggleDensityView);
 
+  // Countermapping overlay toggles
+  document.getElementById('btn-noise-view').addEventListener('click', toggleNoiseView);
+  document.getElementById('btn-community-view').addEventListener('click', toggleCommunityView);
+  document.getElementById('btn-artifacts-view').addEventListener('click', toggleArtifactsView);
+
   // Update R_e legend with actual values
   updateReLegendValues();
 }
@@ -1226,6 +1239,242 @@ function toggleDensityView() {
     btn.classList.remove('active');
     legend.style.display = 'none';
   }
+}
+
+// ============================================================
+// Countermapping Overlays (independent of Re/Density)
+// ============================================================
+
+// Estimated dB proxy: motorway=75, trunk=68, primary=62, rail=72, light_rail=65
+const ROAD_DB = { motorway: 75, motorway_link: 72, trunk: 68, trunk_link: 65, primary: 62, primary_link: 60 };
+const RAIL_DB = { rail: 72, subway: 70, light_rail: 65, monorail: 60 };
+
+function buildNoiseLayer() {
+  if (noiseLayer) return;
+  noiseLayer = L.layerGroup();
+
+  // Buffer highways with pulsing circles every ~500m
+  if (layers.highways) {
+    layers.highways.eachLayer(layer => {
+      const hw = layer.feature.properties.highway;
+      const db = ROAD_DB[hw] || 60;
+      const coords = layer.getLatLngs ? layer.getLatLngs() : [];
+      const flat = Array.isArray(coords[0]) && coords[0] instanceof L.LatLng ? coords : (coords.length && Array.isArray(coords[0]) ? coords[0] : coords);
+      for (let i = 0; i < flat.length; i += 8) {
+        const pt = flat[i];
+        if (!pt || !pt.lat) continue;
+        const r = 10 + (db - 55) * 1.5;
+        L.circleMarker([pt.lat, pt.lng], {
+          radius: r,
+          fillColor: `rgba(192,57,43,${0.15 + (db - 55) * 0.01})`,
+          fillOpacity: 0.4,
+          stroke: false,
+          interactive: true
+        }).bindTooltip(`~${db} dB estimated`, { direction: 'top' }).addTo(noiseLayer);
+      }
+    });
+  }
+
+  // Buffer railways
+  if (layers.railways) {
+    layers.railways.eachLayer(layer => {
+      const rw = layer.feature.properties.railway;
+      const db = RAIL_DB[rw] || 65;
+      const coords = layer.getLatLngs ? layer.getLatLngs() : [];
+      const flat = Array.isArray(coords[0]) && coords[0] instanceof L.LatLng ? coords : (coords.length && Array.isArray(coords[0]) ? coords[0] : coords);
+      for (let i = 0; i < flat.length; i += 10) {
+        const pt = flat[i];
+        if (!pt || !pt.lat) continue;
+        L.circleMarker([pt.lat, pt.lng], {
+          radius: 8 + (db - 55),
+          fillColor: `rgba(142,68,173,${0.15 + (db - 55) * 0.01})`,
+          fillOpacity: 0.35,
+          stroke: false,
+          interactive: true
+        }).bindTooltip(`~${db} dB rail`, { direction: 'top' }).addTo(noiseLayer);
+      }
+    });
+  }
+}
+
+function toggleNoiseView() {
+  noiseMode = !noiseMode;
+  const btn = document.getElementById('btn-noise-view');
+  if (noiseMode) {
+    buildNoiseLayer();
+    noiseLayer.addTo(map);
+    btn.classList.add('active');
+  } else {
+    if (noiseLayer && map.hasLayer(noiseLayer)) map.removeLayer(noiseLayer);
+    btn.classList.remove('active');
+  }
+}
+
+// Community overlay: color each shattered polygon by non-white share
+function buildCommunityLayer() {
+  if (communityLayer) return;
+  communityLayer = L.layerGroup();
+
+  if (!shatteredCirclesRaw) return;
+  shatteredCirclesRaw.features.forEach(f => {
+    const key = `${f.properties.route}:${f.properties.stop}`;
+    const demo = demographicsData[key] || {};
+    const pop = demo.population || 0;
+    if (pop === 0) return;
+    const nonWhiteShare = 1 - ((demo.white || 0) / pop);
+    // Red scale: low = light, high = dark red
+    const r = Math.round(254 - nonWhiteShare * 151);
+    const g = Math.round(235 - nonWhiteShare * 235);
+    const b = Math.round(226 - nonWhiteShare * 213);
+    L.geoJSON(f, {
+      style: {
+        color: `rgb(${r},${g},${b})`,
+        weight: 1.5,
+        opacity: 0.8,
+        fillColor: `rgb(${r},${g},${b})`,
+        fillOpacity: 0.5
+      },
+      interactive: true
+    }).bindTooltip(
+      `<b>${f.properties.stop}</b><br>Non-white: ${(nonWhiteShare * 100).toFixed(0)}%<br>Pop: ${pop.toLocaleString()}`,
+      { sticky: true }
+    ).addTo(communityLayer);
+  });
+}
+
+function toggleCommunityView() {
+  communityMode = !communityMode;
+  const btn = document.getElementById('btn-community-view');
+  const legend = document.getElementById('community-map-legend');
+  if (communityMode) {
+    buildCommunityLayer();
+    communityLayer.addTo(map);
+    btn.classList.add('active');
+    legend.style.display = 'block';
+  } else {
+    if (communityLayer && map.hasLayer(communityLayer)) map.removeLayer(communityLayer);
+    btn.classList.remove('active');
+    legend.style.display = 'none';
+  }
+}
+
+// Geo-tagged artifacts: user photos with EXIF GPS + art locations
+const ARTIFACT_DATA = [
+  // Ohlone Greenway field photos (user uploads with GPS)
+  { lat: 37.880008, lon: -122.289292, src: 'assets/story/ohlone-path-mural.jpg', title: 'Greenway path mural', site: 'Ohlone Greenway' },
+  { lat: 37.880764, lon: -122.289606, src: 'assets/story/ohlone-bench-art.jpg', title: 'Community bench art', site: 'Ohlone Greenway' },
+  { lat: 37.885411, lon: -122.291689, src: 'assets/story/ohlone-rail-corridor.jpg', title: 'Former rail corridor', site: 'Ohlone Greenway' },
+  { lat: 37.886069, lon: -122.291961, src: 'assets/story/ohlone-greenway-sign.jpg', title: 'Greenway marker', site: 'Ohlone Greenway' },
+  { lat: 37.891503, lon: -122.293494, src: 'assets/story/ohlone-albany-sign.jpg', title: 'Albany segment', site: 'Ohlone Greenway' },
+  { lat: 37.893850, lon: -122.294397, src: 'assets/story/ohlone-face-mural.jpg', title: 'Face mural', site: 'Ohlone Greenway' },
+  { lat: 37.901767, lon: -122.297883, src: 'assets/story/ohlone-fire-circle.jpg', title: 'Fire circle art', site: 'Ohlone Greenway' },
+  // Channing / South Berkeley (web-sourced art)
+  { lat: 37.8550, lon: -122.2678, src: 'assets/story/channing-south-berkeley-mural.jpg', title: '"The Invisible Becomes Visible" mural', site: 'Channing x California, Berkeley' },
+  // Jack London Square (web-sourced art)
+  { lat: 37.7959, lon: -122.2716, src: 'assets/story/jls-mural-tour.jpg', title: '"Earth Sanctuary" mural', site: 'Jack London Square, Oakland' }
+];
+
+function findNearestShatteredPolygon(lat, lon) {
+  if (!shatteredCirclesRaw) return null;
+  let best = null, bestDist = Infinity;
+  shatteredCirclesRaw.features.forEach(f => {
+    const c = getCentroid(f.geometry);
+    const d = Math.sqrt(Math.pow(c[0] - lat, 2) + Math.pow(c[1] - lon, 2));
+    if (d < bestDist) { bestDist = d; best = f; }
+  });
+  return best;
+}
+
+function buildArtifactsLayer() {
+  if (artifactsLayer) return;
+  artifactsLayer = L.layerGroup();
+
+  ARTIFACT_DATA.forEach(art => {
+    const icon = L.divIcon({
+      className: 'artifact-marker-icon',
+      html: `<img src="${art.src}" width="36" height="36" style="object-fit:cover;display:block;">`,
+      iconSize: [36, 36],
+      iconAnchor: [18, 18]
+    });
+    const marker = L.marker([art.lat, art.lon], { icon: icon, interactive: true });
+    marker.bindTooltip(`<b>${art.title}</b><br>${art.site}`, { direction: 'top', offset: [0, -20] });
+
+    marker.on('click', function() {
+      const poly = findNearestShatteredPolygon(art.lat, art.lon);
+      if (poly) {
+        const centroid = getCentroid(poly.geometry);
+        // Draw forensic line from artifact to polygon centroid
+        const line = L.polyline([[art.lat, art.lon], centroid], {
+          color: '#d4a017', weight: 2, dashArray: '6 4', opacity: 0.8
+        }).addTo(map);
+        setTimeout(() => map.removeLayer(line), 5000);
+
+        // Show popup with artifact + polygon info
+        const re = (poly.properties.re_ratio || 0).toFixed(4);
+        L.popup()
+          .setLatLng([art.lat, art.lon])
+          .setContent(`
+            <div style="max-width:220px">
+              <img src="${art.src}" style="width:100%;border-radius:4px;margin-bottom:6px">
+              <b>${art.title}</b><br>
+              <span style="font-size:0.78rem;color:#888">${art.site}</span><br>
+              <span style="font-size:0.78rem">Nearest polygon: <b>${poly.properties.stop}</b> (R<sub>e</sub> = ${re})</span>
+            </div>
+          `)
+          .openOn(map);
+      }
+    });
+
+    marker.addTo(artifactsLayer);
+  });
+}
+
+function toggleArtifactsView() {
+  artifactsMode = !artifactsMode;
+  const btn = document.getElementById('btn-artifacts-view');
+  if (artifactsMode) {
+    buildArtifactsLayer();
+    artifactsLayer.addTo(map);
+    btn.classList.add('active');
+  } else {
+    if (artifactsLayer && map.hasLayer(artifactsLayer)) map.removeLayer(artifactsLayer);
+    btn.classList.remove('active');
+  }
+}
+
+// ============================================================
+// Forensic Field Notes (Limits of the Map)
+// ============================================================
+
+const FIELD_NOTES = [
+  {
+    quote: 'We understand walking as map-making, a form of knowledge production generated by performative and situated storytelling along paths and in places filled with meaning.',
+    cite: 'Sletto et al., "Walking, knowing, and the limits of the map," Cultural Geographies 28(4), 2021'
+  },
+  {
+    quote: 'Post-representational cartography views maps as inherently unstable and unfinished, always in the making and thus singularly open for refolding and re-presentation.',
+    cite: 'Sletto et al., 2021'
+  },
+  {
+    quote: 'The material, performative crossings of bodies through landscapes may inspire new forms of knowledge production and destabilize Cartesian cartographic colonialities.',
+    cite: 'Sletto et al., 2021'
+  }
+];
+
+function buildFieldNotesHtml() {
+  const notesHtml = FIELD_NOTES.map(n =>
+    `<blockquote>"${n.quote}"</blockquote><div class="fn-cite">— ${n.cite}</div>`
+  ).join('');
+  return `
+    <div class="field-notes-panel">
+      <h3>Forensic Field Notes — Limits of the Map</h3>
+      <p style="font-size:0.78rem;color:#666;margin-bottom:8px">
+        The R<sub>e</sub> ratio measures the grid, but walking methodology captured the feeling of space that data occludes.
+        What follows is not data — it is what the walker noticed that the polygon could not hold.
+      </p>
+      ${notesHtml}
+    </div>
+  `;
 }
 
 // ============================================================
@@ -1863,6 +2112,8 @@ function showWalkthroughPage() {
         <h2>Thank You</h2>
         <p>This map was created to visualize how infrastructure corridors fragment pedestrian access in the East Bay.</p>
         <p>Continue exploring by toggling routes in the Lines tab, viewing the R<sub>e</sub> or Density gradient views, or clicking any polygon on the map to see its detail view.</p>
+        <p>Use the <b>Noise</b>, <b>Community</b>, and <b>Artifacts</b> buttons above the map for additional countermapping overlays.</p>
+        ${buildFieldNotesHtml()}
         <div class="story-section-card" style="margin-top:14px">
           <div class="story-kicker">Sources</div>
           <ul class="story-source-list">${srcHtml}</ul>
@@ -2475,6 +2726,12 @@ function dimLayersForZoom() {
   }
   if (reachRatioLayer && map.hasLayer(reachRatioLayer))
     map.removeLayer(reachRatioLayer);
+  if (noiseLayer && map.hasLayer(noiseLayer))
+    map.removeLayer(noiseLayer);
+  if (communityLayer && map.hasLayer(communityLayer))
+    map.removeLayer(communityLayer);
+  if (artifactsLayer && map.hasLayer(artifactsLayer))
+    map.removeLayer(artifactsLayer);
   if (window._controlMarkerLayer && map.hasLayer(window._controlMarkerLayer))
     map.removeLayer(window._controlMarkerLayer);
 }
@@ -2500,6 +2757,12 @@ function restoreLayerVisibility() {
   }
   if (window._controlMarkerLayer && !map.hasLayer(window._controlMarkerLayer))
     window._controlMarkerLayer.addTo(map);
+  if (noiseMode && noiseLayer && !map.hasLayer(noiseLayer))
+    noiseLayer.addTo(map);
+  if (communityMode && communityLayer && !map.hasLayer(communityLayer))
+    communityLayer.addTo(map);
+  if (artifactsMode && artifactsLayer && !map.hasLayer(artifactsLayer))
+    artifactsLayer.addTo(map);
 }
 
 // ============================================================

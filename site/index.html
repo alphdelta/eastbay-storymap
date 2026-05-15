@@ -246,6 +246,13 @@
     <button id="btn-density-view" title="Toggle Population Density gradient view">Density View</button>
   </div>
 
+  <!-- Countermapping overlays -->
+  <div id="countermap-toggle-group">
+    <button id="btn-noise-view" title="Toggle road and rail sonic-tax overlay">Noise</button>
+    <button id="btn-community-view" title="Toggle demographic overlay">Community</button>
+    <button id="btn-artifacts-view" title="Toggle geo-tagged field artifacts">Artifacts</button>
+  </div>
+
   <!-- Reach Ratio scale legend (shown in Re mode) -->
   <div id="re-map-legend" style="display:none;">
     <div class="re-map-legend-title">Reach Ratio (R<sub>e</sub>)</div>
@@ -264,6 +271,15 @@
       <span id="density-min">0</span><span id="density-mid">—</span><span id="density-max">—</span>
     </div>
     <div class="re-map-scale-desc">Low &larr; Sparse &nbsp;|&nbsp; Dense &rarr; High</div>
+  </div>
+
+  <div id="community-map-legend" style="display:none;">
+    <div class="re-map-legend-title">Community Composition</div>
+    <div class="community-map-scale-bar"></div>
+    <div class="re-map-scale-labels">
+      <span>Lower share</span><span>Higher share</span>
+    </div>
+    <div class="re-map-scale-desc">Share of residents of color inside each shattered circle</div>
   </div>
 
   <!-- Basemap toggle -->
