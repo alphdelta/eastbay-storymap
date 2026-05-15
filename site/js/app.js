@@ -110,7 +110,6 @@ const SITE_STORIES = {
       }
     ],
     testimonies: [
-    testimonies: [
       {
         quote: 'We envision a mixed-income transit village with a thriving Flea Market, a greenway with parks and bike lanes, housing for all — and slow streets made safe for our elders, children, drivers, transit users, pedestrians and bicyclists.',
         attribution: 'South Berkeley Now! (173 members)',
@@ -252,7 +251,6 @@ const SITE_STORIES = {
       }
     ],
     testimonies: [
-    testimonies: [
       {
         quote: 'Biking along the greenway from Berkeley to Albany proved to be faster than driving the same distance. Economic efficiency, better health, and personal happiness all rolled into one.',
         attribution: 'Graham Freeman, Looking Beyond Tomorrow',
@@ -341,7 +339,6 @@ const SITE_STORIES = {
         credit: 'Port of Oakland'
       }
     ],
-    testimonies: [
     testimonies: [
       {
         quote: 'Stand in downtown Oakland and look around and it can be easy to forget it\'s a coastal city. That\'s because Interstate 880 cuts a giant, uninviting swath between the city center and the waterfront at Jack London Square.',
