@@ -1128,7 +1128,7 @@ blockquote {
 #countermap-toggle-group {
   position: fixed;
   top: 50px;
-  right: 160px;
+  right: 14px;
   z-index: 1000;
   display: flex;
   gap: 4px;
@@ -1136,7 +1136,7 @@ blockquote {
 }
 
 #btn-noise-view, #btn-community-view, #btn-artifacts-view {
-  padding: 6px 12px;
+  padding: 6px 10px;
   border: none;
   background: #fff;
   font-family: 'Ubuntu', 'Segoe UI', system-ui, sans-serif;
@@ -1151,6 +1151,7 @@ blockquote {
   display: inline-flex;
   align-items: center;
   height: 28px;
+  white-space: nowrap;
 }
 
 #btn-noise-view.active { background: #c0392b; color: #fff; }
