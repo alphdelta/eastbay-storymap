@@ -16,7 +16,7 @@
   <div id="sidebar">
     <div id="sidebar-header">
       <h1>Shattered Circles</h1>
-      <p class="subtitle">A Spatial Equity Audit of East Bay Transit</p>
+      <p class="subtitle">A Countermapping of East Bay Transit Corridors</p>
     </div>
 
     <!-- Tab bar -->
@@ -32,10 +32,10 @@
         <div id="sidebar-content">
           <!-- Intro panel -->
           <div class="story-panel active" data-panel="intro">
-            <h2>Life Along the Corridors</h2>
-            <p>Freeways and rail lines don't just move people through the East Bay&mdash;they divide the communities around them. This map follows AC Transit routes that parallel major corridors. Each bus stop becomes a lens: a half-mile walking polygon reveals how much of the surrounding neighborhood is actually reachable on foot.</p>
+            <h2>Inhabited Corridors</h2>
+            <p>This countermapping project asks how systems built for mass movement reshape life not moving at that speed. Instead of assuming the city is a frictionless plane, it compares the theoretical half-mile circle to the area actually reachable on foot along East Bay transit corridors.</p>
             <div class="route-grid-3x3" id="route-grid-3x3"></div>
-            <p class="hint">Press <b>Next</b> to begin the guided walkthrough, or toggle polygons in the Lines tab to explore on your own.</p>
+            <p class="hint">Press <b>Next</b> to begin the guided walkthrough, or toggle polygons in the Lines tab to explore on your own. The walkthrough now moves from permeability to lived counterstories.</p>
           </div>
 
           <!-- Walkthrough panel -->
@@ -66,6 +66,7 @@
             <div id="site-description">
               <p id="site-desc-text"></p>
             </div>
+            <div id="site-story-stack"></div>
             <div id="site-pie-chart"></div>
           </div>
 
@@ -245,6 +246,13 @@
     <button id="btn-density-view" title="Toggle Population Density gradient view">Density View</button>
   </div>
 
+  <!-- Countermapping overlays -->
+  <div id="countermap-toggle-group">
+    <button id="btn-noise-view" title="Toggle road and rail sonic-tax overlay">Noise</button>
+    <button id="btn-community-view" title="Toggle demographic overlay">Community</button>
+    <button id="btn-artifacts-view" title="Toggle geo-tagged field artifacts">Artifacts</button>
+  </div>
+
   <!-- Reach Ratio scale legend (shown in Re mode) -->
   <div id="re-map-legend" style="display:none;">
     <div class="re-map-legend-title">Reach Ratio (R<sub>e</sub>)</div>
@@ -263,6 +271,15 @@
       <span id="density-min">0</span><span id="density-mid">—</span><span id="density-max">—</span>
     </div>
     <div class="re-map-scale-desc">Low &larr; Sparse &nbsp;|&nbsp; Dense &rarr; High</div>
+  </div>
+
+  <div id="community-map-legend" style="display:none;">
+    <div class="re-map-legend-title">Community Composition</div>
+    <div class="community-map-scale-bar"></div>
+    <div class="re-map-scale-labels">
+      <span>Lower share</span><span>Higher share</span>
+    </div>
+    <div class="re-map-scale-desc">Share of residents of color inside each shattered circle</div>
   </div>
 
   <!-- Basemap toggle -->

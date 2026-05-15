@@ -66,12 +66,403 @@ const CONTROL_SITES = [
   }
 ];
 
+const SITE_STORIES = {
+  'Channing x California, Berkeley': {
+    summary: 'This is the countermapping control where the street grid still behaves almost like the theoretical circle. But nearby South Berkeley murals show why that clean geometry is not the whole story: residents used art to preserve memory, hold history in public, and insist that movement through a neighborhood should still belong to the people living there.',
+    arc: [
+      {
+        title: 'Opening',
+        text: 'Near Channing, the walk polygon stays close to isotropic: streets connect, crossings are frequent, and very little of the half-mile circle is amputated. It is useful as a control precisely because it shows what the metric looks like when the grid is mostly intact.'
+      },
+      {
+        title: 'Countermap',
+        text: 'A few blocks away on Ashby, “The Invisible Becomes Visible” turns the corridor into a public timeline. Instead of reducing the area to circulation, the mural foregrounds Ohlone presence, migration, labor, civil rights, and neighborhood figures who are usually omitted from transportation maps.'
+      },
+      {
+        title: 'What the metric misses',
+        text: 'The site reminds us that a strong reach ratio is not the same thing as a complete place story. Countermapping means holding both truths together: measurable permeability and lived memory.'
+      }
+    ],
+    gallery: [
+      {
+        src: 'assets/story/channing-south-berkeley-mural.jpg',
+        alt: 'The Invisible Becomes Visible mural along Ashby Avenue in South Berkeley.',
+        title: 'Timeline wall',
+        emotion: 'Pride + remembrance',
+        caption: 'The 100-foot mural layers Ohlone history, migration, labor, and neighborhood figures into one street-facing civic timeline.',
+        credit: 'Photo via Berkeleyside / Daniel McPartlan'
+      },
+      {
+        src: 'assets/story/channing-waving-man.jpg',
+        alt: 'Detail of Joseph Charles, the Waving Man, in the South Berkeley mural.',
+        title: 'Neighborhood figure',
+        emotion: 'Recognition',
+        caption: 'Joseph Charles, the Waving Man, turns the wall from abstract history into local recognition: this is a neighborhood naming its own people.',
+        credit: 'Photo via Berkeleyside / Daniel McPartlan'
+      },
+      {
+        src: 'assets/story/channing-detail.jpg',
+        alt: 'Painted detail from The Invisible Becomes Visible mural in South Berkeley.',
+        title: 'Shared history detail',
+        emotion: 'Care + witness',
+        caption: 'Close details reveal how the mural works at pedestrian scale, rewarding slow looking instead of just drive-by visibility.',
+        credit: 'Photo via Berkeleyside / Daniel McPartlan'
+      }
+    ],
+    testimonies: [
+      {
+        quote: 'Art has a lot to do with social justice, too. We all felt that we wanted to go and make a statement.',
+        attribution: 'Edythe Boone, muralist',
+        sourceLabel: 'Berkeleyside, 2018',
+        sourceUrl: 'https://berkeleyside.org/2018/09/07/new-mural-is-a-timeline-of-south-berkeley-from-the-ohlones-to-the-present-day'
+      },
+      {
+        quote: 'I had a very diverse team. I had trans; I had gay women, couples, men; I had black, white, Chinese, Japanese.',
+        attribution: 'Edythe Boone, muralist',
+        sourceLabel: 'Berkeleyside, 2018',
+        sourceUrl: 'https://berkeleyside.org/2018/09/07/new-mural-is-a-timeline-of-south-berkeley-from-the-ohlones-to-the-present-day'
+      },
+      {
+        quote: 'People live with the art, so you’re charged with the responsibility of co-creating their environment.',
+        attribution: 'Ellie Brumbaum, artist',
+        sourceLabel: 'Berkeleyside, 2018',
+        sourceUrl: 'https://berkeleyside.org/2018/09/07/new-mural-is-a-timeline-of-south-berkeley-from-the-ohlones-to-the-present-day'
+      },
+      {
+        quote: 'The project ultimately has inspired the community to stay connected to and take pride in a deep cultural history that will slip away if not preserved.',
+        attribution: 'Friends of Adeline community mural project',
+        sourceLabel: 'Friends of Adeline',
+        sourceUrl: 'https://www.friendsofadeline.org/community-mural-project/'
+      }
+    ],
+    sources: [
+      {
+        label: 'Berkeleyside — “New mural is a timeline of South Berkeley, from the Ohlone to the present day”',
+        url: 'https://berkeleyside.org/2018/09/07/new-mural-is-a-timeline-of-south-berkeley-from-the-ohlones-to-the-present-day'
+      },
+      {
+        label: 'Friends of Adeline — The Invisible Becomes Visible community mural project',
+        url: 'https://www.friendsofadeline.org/community-mural-project/'
+      }
+    ]
+  },
+  'Ohlone Greenway': {
+    summary: 'The Ohlone Greenway is the countermapping hinge of the project: a transportation corridor that has been reclaimed as park, shortcut, mural wall, exercise space, and neighborhood commons. Your photos make that argument better than a single metric can.',
+    arc: [
+      {
+        title: 'Opening',
+        text: 'Under the BART Richmond Branch, the greenway starts from the same corridor logic as the rest of the project: a linear infrastructure spine built for movement. But on the ground it feels different from the highway-adjacent sites.'
+      },
+      {
+        title: 'Countermap',
+        text: 'Instead of treating the right-of-way as leftover space, residents and artists have turned it into a place of murals, sculpture, planting, play, exercise, and everyday travel. The path is still about getting from A to B, but it also accumulates pause, memory, and belonging.'
+      },
+      {
+        title: 'What the metric misses',
+        text: 'This is the strongest example of the deck’s argument that humans keep making meaning in negative space. The reach ratio captures permeability; the photos and testimonies capture the emotional and social life that standard buffers ignore.'
+      }
+    ],
+    gallery: [
+      {
+        src: 'assets/story/ohlone-history-wide.jpg',
+        alt: 'Wide view of a history mural along the Ohlone Greenway.',
+        title: 'History mural',
+        emotion: 'Collective memory',
+        caption: 'The panoramic wall reads like a public timeline of land, labor, transit, and migration beside the trail.',
+        credit: 'User field photo'
+      },
+      {
+        src: 'assets/story/ohlone-history-detail.jpg',
+        alt: 'Detail view of figures gathered in the Ohlone Greenway history mural.',
+        title: 'History detail',
+        emotion: 'Solidarity',
+        caption: 'The close-up centers people over infrastructure, making the corridor feel inhabited rather than merely engineered.',
+        credit: 'User field photo'
+      },
+      {
+        src: 'assets/story/ohlone-bike-wide.jpg',
+        alt: 'Wide view of bicycle and transit mural on the Ohlone Greenway.',
+        title: 'Bike + transit mural',
+        emotion: 'Motion + possibility',
+        caption: 'Transit, bicycling, and neighborhood life share the same wall, matching the greenway’s role as both path and commons.',
+        credit: 'User field photo'
+      },
+      {
+        src: 'assets/story/ohlone-bike-detail.jpg',
+        alt: 'Detail of cyclist and pedestrian from bicycle mural on the Ohlone Greenway.',
+        title: 'Shared route detail',
+        emotion: 'Care + continuity',
+        caption: 'The cyclist and older pedestrian occupy the same painted route, suggesting mobility across pace, age, and purpose.',
+        credit: 'User field photo'
+      },
+      {
+        src: 'assets/story/ohlone-flowers.jpg',
+        alt: 'Floral mural and poppies along the Ohlone Greenway.',
+        title: 'Floral wall',
+        emotion: 'Delight',
+        caption: 'Painted flowers echo planted poppies in front of them, making the corridor feel tended rather than leftover.',
+        credit: 'User field photo'
+      },
+      {
+        src: 'assets/story/ohlone-face-mural.jpg',
+        alt: 'Figure mural beside the Ohlone Greenway path.',
+        title: 'Figure mural',
+        emotion: 'Reflection',
+        caption: 'A quieter portrait interrupts the faster rhythm of cycling and commuting with a more interior mood.',
+        credit: 'User field photo'
+      },
+      {
+        src: 'assets/story/ohlone-ride-mural.jpg',
+        alt: 'Riding past a mural on the Ohlone Greenway.',
+        title: 'Rider’s-eye view',
+        emotion: 'Flow',
+        caption: 'This rider’s-eye photo makes the argument spatially: the art is encountered in motion, not set apart from daily travel.',
+        credit: 'User field photo'
+      },
+      {
+        src: 'assets/story/ohlone-plaza.jpg',
+        alt: 'Exercise and plaza space along the Ohlone Greenway.',
+        title: 'Exercise plaza',
+        emotion: 'Usefulness',
+        caption: 'The greenway is not only scenic; it has been equipped for exercise, rest, and repeat use by neighbors.',
+        credit: 'User field photo'
+      },
+      {
+        src: 'assets/story/ohlone-fire-circle.jpg',
+        alt: 'Circular seating area along the Ohlone Greenway.',
+        title: 'Circle of rest',
+        emotion: 'Pause',
+        caption: 'A circular seating area introduces gathering and lingering into a corridor otherwise defined by linear movement.',
+        credit: 'User field photo'
+      },
+      {
+        src: 'assets/story/ohlone-albany-sign.jpg',
+        alt: 'Blue ALBANY letter sculpture on the Ohlone Greenway.',
+        title: 'ALBANY sculpture',
+        emotion: 'Belonging',
+        caption: 'The oversized letters work as landmark, selfie spot, and civic marker for people arriving by trail.',
+        credit: 'User field photo'
+      },
+      {
+        src: 'assets/story/ohlone-fernanda-martinez.jpg',
+        alt: 'Fernanda Martinez community mural at the Ohlone Greenway in El Cerrito.',
+        title: 'Fernanda Martinez mural',
+        emotion: 'Warmth',
+        caption: 'A recent community mural in partnership with The Little Hill shows the greenway still attracting new visual identity work.',
+        credit: 'Fernanda Martinez'
+      }
+    ],
+    testimonies: [
+      {
+        quote: 'Many times, biking along the greenway from Berkeley to Albany proved to be faster than driving the same distance.',
+        attribution: 'Graham Freeman, Looking Beyond Tomorrow',
+        sourceLabel: 'Looking Beyond Tomorrow, 2015',
+        sourceUrl: 'https://gjmf.wordpress.com/2015/12/12/ohlone-greenway/'
+      },
+      {
+        quote: 'Economic efficiency, better health, and personal happiness all rolled into one.',
+        attribution: 'Graham Freeman, Looking Beyond Tomorrow',
+        sourceLabel: 'Looking Beyond Tomorrow, 2015',
+        sourceUrl: 'https://gjmf.wordpress.com/2015/12/12/ohlone-greenway/'
+      },
+      {
+        quote: 'We should be engaging with local artists to find ways to beautify the Greenway and the stations. We need to mitigate some of the harsher elements at the stations.',
+        attribution: 'Rita Baruch, Richmond resident',
+        sourceLabel: 'East Bay Times, 2015',
+        sourceUrl: 'https://preprod.eastbaytimes.com/2017/11/17/albany-to-dedicate-ohlone-greenway-projects/'
+      },
+      {
+        quote: 'The designs that are being proposed are pretty, but not very functional.',
+        attribution: 'Hal Schultz, El Cerrito resident',
+        sourceLabel: 'East Bay Times, 2015',
+        sourceUrl: 'https://staging.eastbaytimes.com/2015/06/22/el-cerrito-planning-upgrades-around-bart-stations/'
+      }
+    ],
+    sources: [
+      {
+        label: 'User field photos — Ohlone Greenway, April 2026',
+        url: ''
+      },
+      {
+        label: 'Fernanda Martinez — Ohlone Greenway mural',
+        url: 'https://www.fernandamartinezart.com/murals-1/ohlonegreenway'
+      },
+      {
+        label: 'Looking Beyond Tomorrow — Ohlone Greenway',
+        url: 'https://gjmf.wordpress.com/2015/12/12/ohlone-greenway/'
+      },
+      {
+        label: 'East Bay Times — Albany to dedicate Ohlone Greenway projects',
+        url: 'https://preprod.eastbaytimes.com/2017/11/17/albany-to-dedicate-ohlone-greenway-projects/'
+      },
+      {
+        label: 'East Bay Times — El Cerrito planning upgrades around BART stations',
+        url: 'https://staging.eastbaytimes.com/2015/06/22/el-cerrito-planning-upgrades-around-bart-stations/'
+      }
+    ]
+  },
+  'Jack London Square, Oakland': {
+    summary: 'Jack London is the counterexample at the other end of the spectrum: the polygon is visibly shattered by rail, freeway, and water, yet the district’s mural culture keeps insisting on public life at the waterfront edge.',
+    arc: [
+      {
+        title: 'Opening',
+        text: 'Here the half-mile circle fails most dramatically. Rail lines, the estuary, and I-880 compress movement into a narrow set of approaches, so the polygon exposes the corridor as a hard physical barrier.'
+      },
+      {
+        title: 'Countermap',
+        text: 'The mural festival and self-guided art tour answer that hardness with public image-making. Walls facing tracks and industrial edges become surfaces for Oakland identity, migration stories, dance, and social memory.'
+      },
+      {
+        title: 'What the metric misses',
+        text: 'Jack London shows the project’s full tension: a site can be spatially constrained and still culturally dense. Countermapping means documenting both the amputation of the walk and the stubborn social life that remains.'
+      }
+    ],
+    gallery: [
+      {
+        src: 'assets/story/jack-london-turfin.jpg',
+        alt: 'Turfin mural in the Jack London district of Oakland.',
+        title: 'Turfin arrival wall',
+        emotion: 'Defiance',
+        caption: 'Facing the train approach, this mural makes Oakland culture one of the first images riders encounter as they enter the district.',
+        credit: 'Visit Oakland'
+      },
+      {
+        src: 'assets/story/jack-london-earth-sanctuary.jpg',
+        alt: 'Earth Sanctuary mural featured in Jack London mural tour.',
+        title: 'Earth Sanctuary',
+        emotion: 'Wonder',
+        caption: 'The waterfront mural tour frames Jack London as an outdoor gallery where port infrastructure and public art occupy the same visual field.',
+        credit: 'Visit Oakland'
+      },
+      {
+        src: 'assets/story/jack-london-earth-sanctuary-2.jpg',
+        alt: 'Alternate view of the Earth Sanctuary mural in Jack London Square.',
+        title: 'Waterfront mural detail',
+        emotion: 'Breath',
+        caption: 'Oceanic imagery softens the industrial edge without pretending the edge is gone.',
+        credit: 'Visit Oakland'
+      },
+      {
+        src: 'assets/story/jack-london-muralists.jpg',
+        alt: 'Artists and muralists featured at Jack London Square pop-up gallery.',
+        title: 'Muralists at work',
+        emotion: 'Energy',
+        caption: 'The festival made the act of painting public, turning spectatorship into participation and conversation.',
+        credit: 'Port of Oakland'
+      }
+    ],
+    testimonies: [
+      {
+        quote: 'This festival is a celebration of public art and a way of uniting a community through local collaborations.',
+        attribution: 'Sarah Siskin, Bay Area Mural Festival founder',
+        sourceLabel: 'Port of Oakland, 2018',
+        sourceUrl: 'https://www.portofoakland.com/jack-london-square-free-pop-gallery-showcases-muralists-local-artists'
+      },
+      {
+        quote: 'A lot of times, mural lovers in the community don’t even see when new projects are going up, so we’re trying to highlight the actual process of how a mural is created.',
+        attribution: 'Sarah Siskin, Bay Area Mural Festival director',
+        sourceLabel: 'East Bay Express, 2018',
+        sourceUrl: 'https://eastbayexpress.com/artists-to-paint-the-town-during-weeklong-oakland-mural-festival-2-1/'
+      },
+      {
+        quote: 'When people come up and they talk to you, that energy is coming into the piece and those ideas can come into the piece.',
+        attribution: 'Alise Eastgate, mural artist',
+        sourceLabel: 'East Bay Express, 2018',
+        sourceUrl: 'https://eastbayexpress.com/artists-to-paint-the-town-during-weeklong-oakland-mural-festival-2-1/'
+      },
+      {
+        quote: 'We’re community muralists. It’s all about building with the people where they’re at, and providing the environment that allows them to feel welcome there.',
+        attribution: 'James Shields, Creative Shields',
+        sourceLabel: 'East Bay Express, 2018',
+        sourceUrl: 'https://eastbayexpress.com/artists-to-paint-the-town-during-weeklong-oakland-mural-festival-2-1/'
+      }
+    ],
+    sources: [
+      {
+        label: 'Visit Oakland — Jack London mural tour',
+        url: 'https://www.visitoakland.com/things-to-do/tours/self-guided/jack-london-mural-tour/'
+      },
+      {
+        label: 'Port of Oakland — Jack London Square pop-up gallery and muralists',
+        url: 'https://www.portofoakland.com/jack-london-square-free-pop-gallery-showcases-muralists-local-artists'
+      },
+      {
+        label: 'East Bay Express — Oakland Mural Festival in Jack London',
+        url: 'https://eastbayexpress.com/artists-to-paint-the-town-during-weeklong-oakland-mural-festival-2-1/'
+      }
+    ]
+  }
+};
+
 const ROUTE_DESCRIPTIONS = {
   'L': "Line L runs along San Pablo Avenue, paralleling the I-80 corridor. The highway acts as a wall, severing neighborhoods and reducing walkable reach for communities on either side.",
   '57': "Line 57 traverses 40th Street and MacArthur Boulevard along the I-580 corridor. The elevated freeway creates a linear barrier that fragments the street grid below.",
   '1T': "Line 1T follows International Boulevard and East 14th Street near the BART Fruitvale branch. Rail infrastructure and industrial land uses create gaps in the pedestrian network.",
   'F': "Line F serves the Adeline Street corridor near the BART Richmond branch. Rail yards and elevated tracks interrupt the neighborhood grid, forcing detours for pedestrians."
 };
+
+function buildStoryStack(siteKey) {
+  const story = SITE_STORIES[siteKey];
+  if (!story) return '';
+  const summaryHtml = story.summary ? `<p>${story.summary}</p>` : '';
+
+  const arcHtml = (story.arc || []).map(item => `
+    <div class="story-arc-step">
+      <div class="story-arc-title">${item.title}</div>
+      <p>${item.text}</p>
+    </div>
+  `).join('');
+
+  const galleryHtml = (story.gallery || []).map(item => `
+    <article class="story-art-card">
+      <img src="${item.src}" alt="${item.alt}" loading="lazy">
+      <div class="story-art-meta">
+        <div class="story-art-title-row">
+          <div class="story-art-title">${item.title}</div>
+          <div class="story-emotion">${item.emotion}</div>
+        </div>
+        <p>${item.caption}</p>
+        <div class="story-credit">${item.credit}</div>
+      </div>
+    </article>
+  `).join('');
+
+  const testimonyHtml = (story.testimonies || []).map(item => `
+    <div class="story-quote-card">
+      <blockquote>${item.quote}</blockquote>
+      <p class="interview-attr">${item.attribution}</p>
+    </div>
+  `).join('');
+
+  return `
+    <section class="story-stack story-stack-rich">
+      <div class="story-section-card">
+        <div class="story-kicker">Place story</div>
+        ${summaryHtml}
+        <p class="story-note">Emotion labels are interpretive reads of the images, not sourced quotations.</p>
+      </div>
+      <div class="story-section-card">
+        <div class="story-kicker">Story arc</div>
+        <div class="story-arc">${arcHtml}</div>
+      </div>
+      <div class="story-section-card">
+        <div class="story-kicker">Public art</div>
+        <div class="story-gallery">${galleryHtml}</div>
+      </div>
+      <div class="story-section-card">
+        <div class="story-kicker">Community voice</div>
+        ${testimonyHtml}
+      </div>
+    </section>
+  `;
+}
+
+function getStoryKeyForFeatures(features) {
+  if (!features || features.length !== 1) return null;
+  const feature = features[0];
+  if (feature.properties.route !== 'CONTROL') return null;
+  return feature.properties.stop;
+}
 
 const WALKTHROUGH_SITES = [
   {
@@ -155,6 +546,14 @@ let neighborhoods = [];      // [{name, lat, lon, r}]
 // Global R_e min/max for gradient scaling
 let globalReMin = 1.0;
 let globalReMax = 0.0;
+
+// Countermapping overlay state (independent of Re/Density)
+let noiseMode = false;
+let noiseLayer = null;
+let communityMode = false;
+let communityLayer = null;
+let artifactsMode = false;
+let artifactsLayer = null;
 
 // Per-route navigation
 let currentRoute = null;     // null = overview, or route name string
@@ -553,6 +952,11 @@ async function loadAllData() {
   document.getElementById('btn-reach-ratio').addEventListener('click', toggleReachRatioView);
   document.getElementById('btn-density-view').addEventListener('click', toggleDensityView);
 
+  // Countermapping overlay toggles
+  document.getElementById('btn-noise-view').addEventListener('click', toggleNoiseView);
+  document.getElementById('btn-community-view').addEventListener('click', toggleCommunityView);
+  document.getElementById('btn-artifacts-view').addEventListener('click', toggleArtifactsView);
+
   // Update R_e legend with actual values
   updateReLegendValues();
 }
@@ -835,6 +1239,242 @@ function toggleDensityView() {
     btn.classList.remove('active');
     legend.style.display = 'none';
   }
+}
+
+// ============================================================
+// Countermapping Overlays (independent of Re/Density)
+// ============================================================
+
+// Estimated dB proxy: motorway=75, trunk=68, primary=62, rail=72, light_rail=65
+const ROAD_DB = { motorway: 75, motorway_link: 72, trunk: 68, trunk_link: 65, primary: 62, primary_link: 60 };
+const RAIL_DB = { rail: 72, subway: 70, light_rail: 65, monorail: 60 };
+
+function buildNoiseLayer() {
+  if (noiseLayer) return;
+  noiseLayer = L.layerGroup();
+
+  // Buffer highways with pulsing circles every ~500m
+  if (layers.highways) {
+    layers.highways.eachLayer(layer => {
+      const hw = layer.feature.properties.highway;
+      const db = ROAD_DB[hw] || 60;
+      const coords = layer.getLatLngs ? layer.getLatLngs() : [];
+      const flat = Array.isArray(coords[0]) && coords[0] instanceof L.LatLng ? coords : (coords.length && Array.isArray(coords[0]) ? coords[0] : coords);
+      for (let i = 0; i < flat.length; i += 8) {
+        const pt = flat[i];
+        if (!pt || !pt.lat) continue;
+        const r = 10 + (db - 55) * 1.5;
+        L.circleMarker([pt.lat, pt.lng], {
+          radius: r,
+          fillColor: `rgba(192,57,43,${0.15 + (db - 55) * 0.01})`,
+          fillOpacity: 0.4,
+          stroke: false,
+          interactive: true
+        }).bindTooltip(`~${db} dB estimated`, { direction: 'top' }).addTo(noiseLayer);
+      }
+    });
+  }
+
+  // Buffer railways
+  if (layers.railways) {
+    layers.railways.eachLayer(layer => {
+      const rw = layer.feature.properties.railway;
+      const db = RAIL_DB[rw] || 65;
+      const coords = layer.getLatLngs ? layer.getLatLngs() : [];
+      const flat = Array.isArray(coords[0]) && coords[0] instanceof L.LatLng ? coords : (coords.length && Array.isArray(coords[0]) ? coords[0] : coords);
+      for (let i = 0; i < flat.length; i += 10) {
+        const pt = flat[i];
+        if (!pt || !pt.lat) continue;
+        L.circleMarker([pt.lat, pt.lng], {
+          radius: 8 + (db - 55),
+          fillColor: `rgba(142,68,173,${0.15 + (db - 55) * 0.01})`,
+          fillOpacity: 0.35,
+          stroke: false,
+          interactive: true
+        }).bindTooltip(`~${db} dB rail`, { direction: 'top' }).addTo(noiseLayer);
+      }
+    });
+  }
+}
+
+function toggleNoiseView() {
+  noiseMode = !noiseMode;
+  const btn = document.getElementById('btn-noise-view');
+  if (noiseMode) {
+    buildNoiseLayer();
+    noiseLayer.addTo(map);
+    btn.classList.add('active');
+  } else {
+    if (noiseLayer && map.hasLayer(noiseLayer)) map.removeLayer(noiseLayer);
+    btn.classList.remove('active');
+  }
+}
+
+// Community overlay: color each shattered polygon by non-white share
+function buildCommunityLayer() {
+  if (communityLayer) return;
+  communityLayer = L.layerGroup();
+
+  if (!shatteredCirclesRaw) return;
+  shatteredCirclesRaw.features.forEach(f => {
+    const key = `${f.properties.route}:${f.properties.stop}`;
+    const demo = demographicsData[key] || {};
+    const pop = demo.population || 0;
+    if (pop === 0) return;
+    const nonWhiteShare = 1 - ((demo.white || 0) / pop);
+    // Red scale: low = light, high = dark red
+    const r = Math.round(254 - nonWhiteShare * 151);
+    const g = Math.round(235 - nonWhiteShare * 235);
+    const b = Math.round(226 - nonWhiteShare * 213);
+    L.geoJSON(f, {
+      style: {
+        color: `rgb(${r},${g},${b})`,
+        weight: 1.5,
+        opacity: 0.8,
+        fillColor: `rgb(${r},${g},${b})`,
+        fillOpacity: 0.5
+      },
+      interactive: true
+    }).bindTooltip(
+      `<b>${f.properties.stop}</b><br>Non-white: ${(nonWhiteShare * 100).toFixed(0)}%<br>Pop: ${pop.toLocaleString()}`,
+      { sticky: true }
+    ).addTo(communityLayer);
+  });
+}
+
+function toggleCommunityView() {
+  communityMode = !communityMode;
+  const btn = document.getElementById('btn-community-view');
+  const legend = document.getElementById('community-map-legend');
+  if (communityMode) {
+    buildCommunityLayer();
+    communityLayer.addTo(map);
+    btn.classList.add('active');
+    legend.style.display = 'block';
+  } else {
+    if (communityLayer && map.hasLayer(communityLayer)) map.removeLayer(communityLayer);
+    btn.classList.remove('active');
+    legend.style.display = 'none';
+  }
+}
+
+// Geo-tagged artifacts: user photos with EXIF GPS + art locations
+const ARTIFACT_DATA = [
+  // Ohlone Greenway field photos (user uploads with GPS)
+  { lat: 37.880008, lon: -122.289292, src: 'assets/story/ohlone-path-mural.jpg', title: 'Greenway path mural', site: 'Ohlone Greenway' },
+  { lat: 37.880764, lon: -122.289606, src: 'assets/story/ohlone-bench-art.jpg', title: 'Community bench art', site: 'Ohlone Greenway' },
+  { lat: 37.885411, lon: -122.291689, src: 'assets/story/ohlone-rail-corridor.jpg', title: 'Former rail corridor', site: 'Ohlone Greenway' },
+  { lat: 37.886069, lon: -122.291961, src: 'assets/story/ohlone-greenway-sign.jpg', title: 'Greenway marker', site: 'Ohlone Greenway' },
+  { lat: 37.891503, lon: -122.293494, src: 'assets/story/ohlone-albany-sign.jpg', title: 'Albany segment', site: 'Ohlone Greenway' },
+  { lat: 37.893850, lon: -122.294397, src: 'assets/story/ohlone-face-mural.jpg', title: 'Face mural', site: 'Ohlone Greenway' },
+  { lat: 37.901767, lon: -122.297883, src: 'assets/story/ohlone-fire-circle.jpg', title: 'Fire circle art', site: 'Ohlone Greenway' },
+  // Channing / South Berkeley (web-sourced art)
+  { lat: 37.8550, lon: -122.2678, src: 'assets/story/channing-south-berkeley-mural.jpg', title: '"The Invisible Becomes Visible" mural', site: 'Channing x California, Berkeley' },
+  // Jack London Square (web-sourced art)
+  { lat: 37.7959, lon: -122.2716, src: 'assets/story/jls-mural-tour.jpg', title: '"Earth Sanctuary" mural', site: 'Jack London Square, Oakland' }
+];
+
+function findNearestShatteredPolygon(lat, lon) {
+  if (!shatteredCirclesRaw) return null;
+  let best = null, bestDist = Infinity;
+  shatteredCirclesRaw.features.forEach(f => {
+    const c = getCentroid(f.geometry);
+    const d = Math.sqrt(Math.pow(c[0] - lat, 2) + Math.pow(c[1] - lon, 2));
+    if (d < bestDist) { bestDist = d; best = f; }
+  });
+  return best;
+}
+
+function buildArtifactsLayer() {
+  if (artifactsLayer) return;
+  artifactsLayer = L.layerGroup();
+
+  ARTIFACT_DATA.forEach(art => {
+    const icon = L.divIcon({
+      className: 'artifact-marker-icon',
+      html: `<img src="${art.src}" width="36" height="36" style="object-fit:cover;display:block;">`,
+      iconSize: [36, 36],
+      iconAnchor: [18, 18]
+    });
+    const marker = L.marker([art.lat, art.lon], { icon: icon, interactive: true });
+    marker.bindTooltip(`<b>${art.title}</b><br>${art.site}`, { direction: 'top', offset: [0, -20] });
+
+    marker.on('click', function() {
+      const poly = findNearestShatteredPolygon(art.lat, art.lon);
+      if (poly) {
+        const centroid = getCentroid(poly.geometry);
+        // Draw forensic line from artifact to polygon centroid
+        const line = L.polyline([[art.lat, art.lon], centroid], {
+          color: '#d4a017', weight: 2, dashArray: '6 4', opacity: 0.8
+        }).addTo(map);
+        setTimeout(() => map.removeLayer(line), 5000);
+
+        // Show popup with artifact + polygon info
+        const re = (poly.properties.re_ratio || 0).toFixed(4);
+        L.popup()
+          .setLatLng([art.lat, art.lon])
+          .setContent(`
+            <div style="max-width:220px">
+              <img src="${art.src}" style="width:100%;border-radius:4px;margin-bottom:6px">
+              <b>${art.title}</b><br>
+              <span style="font-size:0.78rem;color:#888">${art.site}</span><br>
+              <span style="font-size:0.78rem">Nearest polygon: <b>${poly.properties.stop}</b> (R<sub>e</sub> = ${re})</span>
+            </div>
+          `)
+          .openOn(map);
+      }
+    });
+
+    marker.addTo(artifactsLayer);
+  });
+}
+
+function toggleArtifactsView() {
+  artifactsMode = !artifactsMode;
+  const btn = document.getElementById('btn-artifacts-view');
+  if (artifactsMode) {
+    buildArtifactsLayer();
+    artifactsLayer.addTo(map);
+    btn.classList.add('active');
+  } else {
+    if (artifactsLayer && map.hasLayer(artifactsLayer)) map.removeLayer(artifactsLayer);
+    btn.classList.remove('active');
+  }
+}
+
+// ============================================================
+// Forensic Field Notes (Limits of the Map)
+// ============================================================
+
+const FIELD_NOTES = [
+  {
+    quote: 'We understand walking as map-making, a form of knowledge production generated by performative and situated storytelling along paths and in places filled with meaning.',
+    cite: 'Sletto et al., "Walking, knowing, and the limits of the map," Cultural Geographies 28(4), 2021'
+  },
+  {
+    quote: 'Post-representational cartography views maps as inherently unstable and unfinished, always in the making and thus singularly open for refolding and re-presentation.',
+    cite: 'Sletto et al., 2021'
+  },
+  {
+    quote: 'The material, performative crossings of bodies through landscapes may inspire new forms of knowledge production and destabilize Cartesian cartographic colonialities.',
+    cite: 'Sletto et al., 2021'
+  }
+];
+
+function buildFieldNotesHtml() {
+  const notesHtml = FIELD_NOTES.map(n =>
+    `<blockquote>"${n.quote}"</blockquote><div class="fn-cite">— ${n.cite}</div>`
+  ).join('');
+  return `
+    <div class="field-notes-panel">
+      <h3>Forensic Field Notes — Limits of the Map</h3>
+      <p style="font-size:0.78rem;color:#666;margin-bottom:8px">
+        The R<sub>e</sub> ratio measures the grid, but walking methodology captured the feeling of space that data occludes.
+        What follows is not data — it is what the walker noticed that the polygon could not hold.
+      </p>
+      ${notesHtml}
+    </div>
+  `;
 }
 
 // ============================================================
@@ -1298,8 +1938,9 @@ function showWalkthroughPage() {
     case 0: // Page 1: Launch
       wtContent.innerHTML = `
         <h2>Welcome</h2>
-        <p>This interactive map explores how freeways, BART lines, and rail corridors fragment the pedestrian network in the East Bay.</p>
-        <p>At each bus stop, a half-mile walking polygon reveals how much of the surrounding area is reachable on foot. Where infrastructure barriers intervene, the polygon shatters.</p>
+        <p>This interactive map counter-maps how freeways, BART lines, and rail corridors fragment the pedestrian network in the East Bay.</p>
+        <p>At each bus stop, a half-mile walking polygon reveals how much of the surrounding area is actually reachable on foot. The comparison is a permeability ratio: actual walkable area divided by the theoretical circle.</p>
+        <p>But the walkthrough also asks what the metric misses: the emotional, cultural, and social life people build within and against these corridors.</p>
         <p class="hint">Press <b>Next</b> to begin the guided tour.</p>
       `;
       setBasemap(userBasemapPref);
@@ -1320,7 +1961,7 @@ function showWalkthroughPage() {
       }).join('');
       wtContent.innerHTML = `
         <h2>Analysis Routes</h2>
-        <p>Toggle the following AC Transit bus line polygons on/off:</p>
+        <p>Toggle the four main AC Transit corridors used for the permeability comparison:</p>
         <div class="wt-toggle-grid">${toggleHtml}</div>
         <p class="hint" id="wt-toggle-hint">Toggle all four routes on to continue.</p>
       `;
@@ -1357,8 +1998,9 @@ function showWalkthroughPage() {
         const c = getCentroid(feat.geometry);
         wtContent.innerHTML = `
           <h2>Channing &times; California, Berkeley</h2>
-          <p>This control site sits in Berkeley's well-connected street grid, away from major infrastructure barriers. The walking polygon is nearly circular, showing strong pedestrian connectivity in all directions.</p>
+          <p>This control site sits in Berkeley's well-connected street grid, away from major infrastructure barriers. The walking polygon is nearly circular, showing what permeability looks like when the street network is largely intact.</p>
           <p>R<sub>e</sub> = <b>${(feat.properties.re_ratio || 0).toFixed(4)}</b></p>
+          ${buildStoryStack('Channing x California, Berkeley')}
         `;
         showWalkthroughOverlay2([c[0], c[1]], [feat]);
       }
@@ -1371,8 +2013,9 @@ function showWalkthroughPage() {
         const c = getCentroid(feat.geometry);
         wtContent.innerHTML = `
           <h2>Ohlone Greenway</h2>
-          <p>The Ohlone Greenway follows a former railroad right-of-way through Albany and El Cerrito. While the greenway itself is a pedestrian path, the surrounding street network shows how legacy rail corridors shape modern walkability.</p>
+          <p>The Ohlone Greenway follows a former railroad right-of-way through Albany and El Cerrito. It is the project’s clearest countermapping example: infrastructure built for linear movement, then reclaimed as path, park, mural wall, and neighborhood commons.</p>
           <p>R<sub>e</sub> = <b>${(feat.properties.re_ratio || 0).toFixed(4)}</b></p>
+          ${buildStoryStack('Ohlone Greenway')}
         `;
         showWalkthroughOverlay2([c[0], c[1]], [feat]);
       }
@@ -1384,8 +2027,9 @@ function showWalkthroughPage() {
       if (feat) {
         wtContent.innerHTML = `
           <h2>Jack London Square, Oakland</h2>
-          <p>Jack London Square sits at Oakland's waterfront, bounded by rail lines, I-880, and the estuary. Multiple infrastructure barriers converge here to constrain pedestrian access, creating a dramatically shattered polygon.</p>
+          <p>Jack London Square sits at Oakland's waterfront, bounded by rail lines, I-880, and the estuary. Multiple infrastructure barriers converge here to constrain pedestrian access, creating a dramatically shattered polygon even as the district remains culturally dense.</p>
           <p>R<sub>e</sub> = <b>${(feat.properties.re_ratio || 0).toFixed(4)}</b></p>
+          ${buildStoryStack('Jack London Square, Oakland')}
         `;
         showWalkthroughOverlay2([37.795145, -122.276890], [feat]);
       }
@@ -1454,19 +2098,33 @@ function showWalkthroughPage() {
       break;
     }
 
-    case 9: // Page 10: Thank you
+    case 9: { // Page 10: Thank you
       // Turn off density view
       if (densityMode) toggleDensityView();
+      const allSources = Object.entries(SITE_STORIES).flatMap(([site, s]) =>
+        (s.sources || []).map(src => ({ ...src, site }))
+      );
+      const srcHtml = allSources.map(s => s.url
+        ? `<li><a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.label}</a></li>`
+        : `<li>${s.label}</li>`
+      ).join('');
       wtContent.innerHTML = `
         <h2>Thank You</h2>
         <p>This map was created to visualize how infrastructure corridors fragment pedestrian access in the East Bay.</p>
         <p>Continue exploring by toggling routes in the Lines tab, viewing the R<sub>e</sub> or Density gradient views, or clicking any polygon on the map to see its detail view.</p>
+        <p>Use the <b>Noise</b>, <b>Community</b>, and <b>Artifacts</b> buttons above the map for additional countermapping overlays.</p>
+        ${buildFieldNotesHtml()}
+        <div class="story-section-card" style="margin-top:14px">
+          <div class="story-kicker">Sources</div>
+          <ul class="story-source-list">${srcHtml}</ul>
+        </div>
         <p class="hint">Press <b>Next</b> to return to the start, or click any polygon to explore on your own.</p>
       `;
       setBasemap(userBasemapPref);
       restoreLayerVisibility();
       map.setView([37.78, -122.20], 11, { animate: false });
       break;
+    }
 
     case 10: // Page 11: Back to launch (same as page 1)
       walkthroughIdx = 0;
@@ -1744,8 +2402,11 @@ function showSitePanel(panel, skipAnim) {
 
   const center = panel.coordinates;
   const hood = lookupNeighborhood(center[0], center[1]);
+  const storyKey = getStoryKeyForFeatures(features);
   let desc;
-  if (isGrouped) {
+  if (storyKey) {
+    desc = '';
+  } else if (isGrouped) {
     const routeList = routes.join(', ');
     desc = `This bus stop on Routes ${routeList} serves the ${hood} neighborhood.`;
     features.forEach(f => {
@@ -1764,6 +2425,11 @@ function showSitePanel(panel, skipAnim) {
     }
   }
   document.getElementById('site-desc-text').textContent = desc;
+  document.getElementById('site-description').style.display = storyKey ? 'none' : 'block';
+
+  const storyStack = document.getElementById('site-story-stack');
+  storyStack.innerHTML = storyKey ? buildStoryStack(storyKey) : '';
+  storyStack.style.display = storyKey ? 'block' : 'none';
 
   // Add pie chart of demographics by race
   const pieContainer = document.getElementById('site-pie-chart');
@@ -2060,6 +2726,12 @@ function dimLayersForZoom() {
   }
   if (reachRatioLayer && map.hasLayer(reachRatioLayer))
     map.removeLayer(reachRatioLayer);
+  if (noiseLayer && map.hasLayer(noiseLayer))
+    map.removeLayer(noiseLayer);
+  if (communityLayer && map.hasLayer(communityLayer))
+    map.removeLayer(communityLayer);
+  if (artifactsLayer && map.hasLayer(artifactsLayer))
+    map.removeLayer(artifactsLayer);
   if (window._controlMarkerLayer && map.hasLayer(window._controlMarkerLayer))
     map.removeLayer(window._controlMarkerLayer);
 }
@@ -2085,6 +2757,12 @@ function restoreLayerVisibility() {
   }
   if (window._controlMarkerLayer && !map.hasLayer(window._controlMarkerLayer))
     window._controlMarkerLayer.addTo(map);
+  if (noiseMode && noiseLayer && !map.hasLayer(noiseLayer))
+    noiseLayer.addTo(map);
+  if (communityMode && communityLayer && !map.hasLayer(communityLayer))
+    communityLayer.addTo(map);
+  if (artifactsMode && artifactsLayer && !map.hasLayer(artifactsLayer))
+    artifactsLayer.addTo(map);
 }
 
 // ============================================================
