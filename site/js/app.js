@@ -2802,6 +2802,8 @@ document.getElementById('btn-next').addEventListener('click', () => {
 
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
+    const ts = document.getElementById('title-screen');
+    if (ts && !ts.classList.contains('hidden')) { dismissTitleScreen(); return; }
     goToOverview();
     return;
   }
@@ -2810,6 +2812,22 @@ document.addEventListener('keydown', (e) => {
 });
 
 document.getElementById('btn-back-overview').addEventListener('click', () => goToOverview());
+
+// ============================================================
+// Title Screen
+// ============================================================
+function dismissTitleScreen() {
+  const ts = document.getElementById('title-screen');
+  if (!ts || ts.classList.contains('hidden')) return;
+  ts.classList.add('hidden');
+  setTimeout(() => { ts.style.display = 'none'; }, 400);
+}
+
+// Buttons dismiss
+document.getElementById('btn-walkthrough').addEventListener('click', (e) => { e.stopPropagation(); dismissTitleScreen(); });
+document.getElementById('btn-explore').addEventListener('click', (e) => { e.stopPropagation(); dismissTitleScreen(); });
+// Click anywhere on overlay dismisses
+document.getElementById('title-screen').addEventListener('click', dismissTitleScreen);
 
 // ============================================================
 // Init

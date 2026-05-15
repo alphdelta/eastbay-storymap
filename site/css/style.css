@@ -1,3 +1,65 @@
+/* === Title Screen === */
+#title-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: #2c3e50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
+}
+#title-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.title-screen-content {
+  text-align: center;
+  color: #fff;
+  max-width: 600px;
+  padding: 40px;
+  cursor: default;
+}
+.title-screen-heading {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+.title-screen-sub {
+  font-size: 1.25rem;
+  font-weight: 300;
+  opacity: 0.85;
+  margin-bottom: 40px;
+}
+.title-screen-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.title-screen-btn {
+  padding: 12px 32px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 2px solid rgba(255,255,255,0.6);
+  background: transparent;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.title-screen-btn:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: #fff;
+}
+.title-screen-hint {
+  font-size: 0.8rem;
+  opacity: 0.45;
+  font-style: italic;
+}
+
 /* === Reset & Base === */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
