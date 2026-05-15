@@ -1330,17 +1330,31 @@ function buildCommunityLayer() {
   });
 }
 
+let _preCommunityPolygonState = {};
 function toggleCommunityView() {
   communityMode = !communityMode;
   const btn = document.getElementById('btn-community-view');
   const legend = document.getElementById('community-map-legend');
   if (communityMode) {
+    // Save which polygon layers are currently on the map, then hide them
+    _preCommunityPolygonState = {};
+    for (const rn in polygonLayers) {
+      _preCommunityPolygonState[rn] = map.hasLayer(polygonLayers[rn]);
+      if (map.hasLayer(polygonLayers[rn])) map.removeLayer(polygonLayers[rn]);
+    }
     buildCommunityLayer();
     communityLayer.addTo(map);
     btn.classList.add('active');
     legend.style.display = 'block';
   } else {
     if (communityLayer && map.hasLayer(communityLayer)) map.removeLayer(communityLayer);
+    // Restore polygon layers that were visible before community was toggled on
+    for (const rn in _preCommunityPolygonState) {
+      if (_preCommunityPolygonState[rn] && polygonLayers[rn] && !map.hasLayer(polygonLayers[rn])) {
+        polygonLayers[rn].addTo(map);
+      }
+    }
+    _preCommunityPolygonState = {};
     btn.classList.remove('active');
     legend.style.display = 'none';
   }
